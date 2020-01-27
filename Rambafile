@@ -1,0 +1,33 @@
+### Headers settings
+company: gsabatie
+
+### Xcode project settings
+project_name: NumbersLight
+xcodeproj_path: NumbersLight.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: NumbersLight
+
+# The file path for new modules
+project_file_path: NumbersLight/modules
+
+# The Xcode group path to new modules
+project_group_path: NumbersLight/modules
+
+### Tests generation settings section
+# The tests target name
+test_target: NumbersLightTests
+
+# The file path for new tests
+test_file_path: NumbersLightTest
+
+# The Xcode group path to new tests
+test_group_path: NumbersLightTest
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: CleanViper, git: 'https://github.com/gsabatie/Clean-VIPER-generamba-template'}
