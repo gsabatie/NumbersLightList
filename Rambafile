@@ -20,7 +20,7 @@ project_group_path: NumbersLight/modules
 test_target: NumbersLightTests
 
 # The file path for new tests
-test_file_path: NumbersLightTest
+test_file_path: NumbersLightTests
 
 # The Xcode group path to new tests
 test_group_path: NumbersLightTest

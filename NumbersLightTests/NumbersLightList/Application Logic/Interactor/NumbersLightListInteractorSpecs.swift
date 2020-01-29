@@ -17,7 +17,7 @@ import SwiftyMocky
 final class NumbersLightListInteractorSpecs: QuickSpec {
 
     var interactor: NumbersLightListInteractor!
-    var presenterMock: InteractorOutputProtocolMock!
+    var presenterMock: NumbersLightListInteractorOutputProtocolMock!
 
     override func spec() {
     
@@ -32,6 +32,6 @@ extension NumbersLightListInteractor {
     }
 }
 
-fileprivate extension  NumbersLightListInteractorMock {
+fileprivate extension  NumbersLightListInteractorOutputProtocolMock {
 
 }

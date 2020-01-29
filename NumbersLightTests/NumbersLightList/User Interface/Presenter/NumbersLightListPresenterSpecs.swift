@@ -27,12 +27,12 @@ final class NumbersLightListPresenterSpecs: QuickSpec {
 }
 
 extension NumbersLightListPresenter {
-    static func forTest(interactorMock: inout NumbersLightListUseCaseProtocol!
+    static func forTest(interactorMock: inout NumbersLightListUseCaseProtocol!,
                          routerMock: NumbersLightListRouterProtocol?,
                          viewMock: NumbersLightListViewProtocol?) -> NumbersLightListPresenter {
        let presenter = NumbersLightListPresenter(interactor: interactorMock, router: routerMock, view: viewMock)
        
-       return interactor
+       return presenter
     }
 }
 
