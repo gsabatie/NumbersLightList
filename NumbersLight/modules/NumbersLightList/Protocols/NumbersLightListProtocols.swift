@@ -14,6 +14,8 @@ protocol NumbersLightListViewProtocol: class{
     var numberLight: [NumberLight] {get set}
     
     var isLoading: Bool { get set }
+    
+    func display(errorMessage: String)
 }
 
 //sourcery: AutoMockable

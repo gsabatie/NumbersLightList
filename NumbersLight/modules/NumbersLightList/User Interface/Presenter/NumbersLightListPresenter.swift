@@ -54,7 +54,7 @@ extension NumbersLightListPresenter: NumbersLightListViewEventResponderProtocol 
             case .success( let lightNumbers):
                 self.view?.numberLight = lightNumbers
             case .failure(let error):
-                print(error)
+                self.view?.display(errorMessage: error.localizedDescription)
             }
         }
     }
@@ -68,7 +68,7 @@ extension NumbersLightListPresenter: NumbersLightListViewEventResponderProtocol 
                   case .success( let lightNumbers):
                       self.view?.numberLight = lightNumbers
                   case .failure(let error):
-                      print(error)
+                    self.view?.display(errorMessage: error.localizedDescription)
                   }
               }
     }

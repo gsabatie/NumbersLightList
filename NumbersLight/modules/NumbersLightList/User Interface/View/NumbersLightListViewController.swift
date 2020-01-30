@@ -39,6 +39,9 @@ final class NumbersLightListViewController: UIViewController, StoryboardLoadable
     // MARK: Private instance variable
     private var progresshud: JGProgressHUD = JGProgressHUD(style: .dark)
     
+    private var errorAlertController: UIAlertController =
+    UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
+    
     private var refreshControl: UIRefreshControl = UIRefreshControl()
 
     
@@ -117,7 +120,10 @@ extension NumbersLightListViewController: UITableViewDataSource {
 }
 
 extension NumbersLightListViewController: NumbersLightListViewProtocol {
-    
+    func display(errorMessage: String) {
+        self.errorAlertController.message = errorMessage
+               self.present(self.errorAlertController, animated: true, completion: nil)
+    }
 }
 
 // MARK: private extension
