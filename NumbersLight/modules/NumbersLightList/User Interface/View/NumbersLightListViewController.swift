@@ -31,12 +31,16 @@ final class NumbersLightListViewController: UIViewController, StoryboardLoadable
                if self.isLoading {
                    self.progresshud.show(in: self.view)
                } else {
+                    self.refreshControl.endRefreshing()
                    self.progresshud.dismiss(animated: true)
                }
            }
        }
     // MARK: Private instance variable
-     private var progresshud = JGProgressHUD(style: .dark)
+    private var progresshud: JGProgressHUD = JGProgressHUD(style: .dark)
+    
+    private var refreshControl: UIRefreshControl = UIRefreshControl()
+
     
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -45,6 +49,12 @@ final class NumbersLightListViewController: UIViewController, StoryboardLoadable
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
+        self.refreshControl
+            .addTarget(
+                self,
+                action: #selector(didRefresh(_:)),
+                for: UIControl.Event.valueChanged)
+        self.tableView.addSubview(self.refreshControl)
         self.output?.viewDidLoad()
     }
     
@@ -61,6 +71,10 @@ final class NumbersLightListViewController: UIViewController, StoryboardLoadable
         {
             cell.set(imageURL: url)
         }
+    }
+    
+    @objc private func didRefresh(_ refreshControl: UIRefreshControl) {
+        self.output?.didRefreshTableView()
     }
 }
 // MARK: - Extension UITableViewDelegate

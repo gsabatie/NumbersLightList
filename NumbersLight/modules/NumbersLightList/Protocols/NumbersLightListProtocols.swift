@@ -21,6 +21,8 @@ protocol NumbersLightListViewEventResponderProtocol {
     
     func viewDidLoad()
     func viewDidAppear()
+    
+    func didRefreshTableView()
 }
 
 //sourcery: AutoMockable
