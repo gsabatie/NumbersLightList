@@ -24,6 +24,10 @@
 		36A436C023E02F7400782BC4 /* NumberLightServiceSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436BF23E02F7400782BC4 /* NumberLightServiceSpecs.swift */; };
 		36A436C223E031C700782BC4 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436C123E031C700782BC4 /* Mock.generated.swift */; };
 		36A436C423E08B4100782BC4 /* NumberLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436C323E08B4100782BC4 /* NumberLight.swift */; };
+		36A436C623E1FE8C00782BC4 /* NumbersLightListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A436C523E1FE8C00782BC4 /* NumbersLightListViewController.storyboard */; };
+		36A436C923E2160B00782BC4 /* NumberLightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436C723E2160B00782BC4 /* NumberLightTableViewCell.swift */; };
+		36A436CA23E2160B00782BC4 /* NumberLightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A436C823E2160B00782BC4 /* NumberLightTableViewCell.xib */; };
+		36A436CC23E2192600782BC4 /* UITableViewRegistrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */; };
 		389B4560643D79510938F995 /* Pods_NumbersLight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD3C53405BE24492177125 /* Pods_NumbersLight.framework */; };
 		69D4D7E120700AF6B47A5B79 /* NumbersLightListPresenterSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE327D811DF00199C77464C /* NumbersLightListPresenterSpecs.swift */; };
 		890AD00CC9A36D3BEC8DC674 /* NumbersLightListviewcontrollerSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B501E5AC759B00C653E037 /* NumbersLightListviewcontrollerSpecs.swift */; };
@@ -80,6 +84,10 @@
 		36A436BF23E02F7400782BC4 /* NumberLightServiceSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLightServiceSpecs.swift; sourceTree = "<group>"; };
 		36A436C123E031C700782BC4 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 		36A436C323E08B4100782BC4 /* NumberLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLight.swift; sourceTree = "<group>"; };
+		36A436C523E1FE8C00782BC4 /* NumbersLightListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NumbersLightListViewController.storyboard; sourceTree = "<group>"; };
+		36A436C723E2160B00782BC4 /* NumberLightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLightTableViewCell.swift; sourceTree = "<group>"; };
+		36A436C823E2160B00782BC4 /* NumberLightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberLightTableViewCell.xib; sourceTree = "<group>"; };
+		36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRegistrable.swift; sourceTree = "<group>"; };
 		40483C23A1DD9E069E1E5C6F /* Pods_NumbersLight_NumbersLightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NumbersLight_NumbersLightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F0485ECA042C6D63985B28 /* NumbersLightListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListViewController.swift; sourceTree = "<group>"; };
 		4F17851D45EB5B54ABFE1616 /* NumbersLightListInteractorSpecs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListInteractorSpecs.swift; sourceTree = "<group>"; };
@@ -164,6 +172,9 @@
 			isa = PBXGroup;
 			children = (
 				46F0485ECA042C6D63985B28 /* NumbersLightListViewController.swift */,
+				36A436C523E1FE8C00782BC4 /* NumbersLightListViewController.storyboard */,
+				36A436C723E2160B00782BC4 /* NumberLightTableViewCell.swift */,
+				36A436C823E2160B00782BC4 /* NumberLightTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +223,7 @@
 				36A436C323E08B4100782BC4 /* NumberLight.swift */,
 				36A436AE23E02F2B00782BC4 /* NumberLightService.swift */,
 				9FA79168F59652B9DEC4F369 /* modules */,
+				36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */,
 			);
 			path = NumbersLight;
 			sourceTree = "<group>";
@@ -534,8 +546,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				36347C3523DF4A5700059A32 /* LaunchScreen.storyboard in Resources */,
+				36A436CA23E2160B00782BC4 /* NumberLightTableViewCell.xib in Resources */,
 				36347C3223DF4A5700059A32 /* Assets.xcassets in Resources */,
 				36347C3023DF4A5400059A32 /* Main.storyboard in Resources */,
+				36A436C623E1FE8C00782BC4 /* NumbersLightListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,9 +702,11 @@
 				29606D8BA6BB74D3E7096A22 /* NumbersLightListPresenter.swift in Sources */,
 				E7889209EDD6C916EAE7F8BA /* NumbersLightListInteractor.swift in Sources */,
 				B36A96B0787FD01DE9BA5B8F /* NumbersLightListRouter.swift in Sources */,
+				36A436C923E2160B00782BC4 /* NumberLightTableViewCell.swift in Sources */,
 				927D870F4C31BA19E9F5FB14 /* NumbersLightListConfigurator.swift in Sources */,
 				36A436C423E08B4100782BC4 /* NumberLight.swift in Sources */,
 				BAAD316F6092DD727B9D1267 /* NumbersLightListInitializer.swift in Sources */,
+				36A436CC23E2192600782BC4 /* UITableViewRegistrable.swift in Sources */,
 				CA66C56896DDB68C4362B05C /* NumbersLightListProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,9 +16,13 @@ final class NumbersLightListPresenter {
     var interactor: NumbersLightListUseCaseProtocol?
 
     // MARK: Instance Variable
+   
 
     // MARK: Constructors
-    init(interactor: NumbersLightListUseCaseProtocol? = nil, router: NumbersLightListRouterProtocol? = nil, view: NumbersLightListViewProtocol? = nil) {
+    init(
+        interactor: NumbersLightListUseCaseProtocol? = nil,
+         router: NumbersLightListRouterProtocol? = nil,
+         view: NumbersLightListViewProtocol? = nil) {
         self.interactor = interactor
         self.router = router
         self.view = view
@@ -40,6 +44,19 @@ extension NumbersLightListPresenter: NumbersLightListInteractorOutputProtocol {
 // MARK: NumbersLightListViewEventResponderProtocol
 extension NumbersLightListPresenter: NumbersLightListViewEventResponderProtocol {
      func viewDidLoad() {
-         
+        self.view?.isLoading = true
      }
+    
+    func viewDidAppear() {
+        self.interactor?.getLightNumber{ (result: Result<[NumberLight], Error>) in
+             self.view?.isLoading = false
+                   switch result {
+                   case .success( let lightNumbers):
+                       self.view?.numberLight = lightNumbers
+                   case .failure(let error):
+                       print(error)
+                   }
+            
+               }
+    }
 }

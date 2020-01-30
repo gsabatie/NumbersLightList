@@ -14,14 +14,23 @@ final class NumbersLightListInteractor {
     weak var output: NumbersLightListInteractorOutputProtocol?
 
     // MARK: Instance Variable
+     var numberLightService: NumberLightWebService
 
     // MARK: Constructors
-    init(output: NumbersLightListInteractorOutputProtocol? = nil) {
+    init(
+        output: NumbersLightListInteractorOutputProtocol? = nil,
+        numberLightService: NumberLightWebService = NumberLightService()) {
         self.output = output
+        self.numberLightService = numberLightService
     }
 }
 
 // MARK: NumbersLightListUseCaseProtocol
 extension NumbersLightListInteractor: NumbersLightListUseCaseProtocol {
-
+    func getLightNumber(completion: @escaping NumberLightCompletionBlock) {
+        self.numberLightService.getTestObject {
+            (result: Result<[NumberLight], Error>) in
+            completion(result)
+        }
+    }
 }

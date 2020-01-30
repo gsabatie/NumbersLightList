@@ -12,6 +12,7 @@ import EasyOSLogger
 
 typealias NumberLightCompletionBlock = (Swift.Result<[NumberLight], Error>) -> ()
 
+//sourcery: AutoMockable
 protocol NumberLightWebService {
     func getTestObject(completion: @escaping NumberLightCompletionBlock)
 }
@@ -38,7 +39,7 @@ struct NumberLightService: NumberLightWebService {
                     }
                 }
                 case .failure(let error):
-                completion(.failure(error))
+                    completion(.failure(error))
             }
         }
     }

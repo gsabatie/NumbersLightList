@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum NumbersLightAPIRouter: URLRequestConvertible {
-    static let baseURLString = "http://dev.tapptic.com"
+    static let baseURLString = "https://dev.tapptic.com"
     
     case numberLight
     
@@ -18,7 +18,7 @@ enum NumbersLightAPIRouter: URLRequestConvertible {
         let path: String = {
             switch self {
             case .numberLight:
-               return "/test/"
+               return "/test/json.php"
             }
         }()
         

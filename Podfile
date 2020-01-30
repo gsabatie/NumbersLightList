@@ -9,8 +9,8 @@ target 'NumbersLight' do
   pod 'Alamofire', '4.8.2'
   pod 'EasyOSLogger', '0.1.1'
   pod 'RealmSwift', '4.3.1'
-  pod 'JGProgressHUD', '2.1'
-
+  pod 'JGProgressHUD', '2.1' 
+  pod 'AlamofireImage', '3.5'
 
   target 'NumbersLightTests' do
     inherit! :search_paths

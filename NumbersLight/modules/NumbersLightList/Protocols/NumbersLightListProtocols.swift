@@ -11,11 +11,16 @@ import UIKit
 //sourcery: AutoMockable
 protocol NumbersLightListViewProtocol: class{
     var output: NumbersLightListViewEventResponderProtocol? {get set}
+    var numberLight: [NumberLight] {get set}
+    
+    var isLoading: Bool { get set }
 }
 
 //sourcery: AutoMockable
 protocol NumbersLightListViewEventResponderProtocol {
+    
     func viewDidLoad()
+    func viewDidAppear()
 }
 
 //sourcery: AutoMockable
@@ -25,6 +30,7 @@ protocol NumbersLightListPresentationProtocol: class {
 
 //sourcery: AutoMockable
 protocol NumbersLightListUseCaseProtocol: class {
+    func getLightNumber(completion: @escaping NumberLightCompletionBlock)
 
 }
 
