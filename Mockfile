@@ -1,0 +1,12 @@
+sourceryCommand: null
+NumbersLightTests:
+  sources:
+    include:
+    - ./NumbersLight
+  output: ./NumbersLightTests/Mock.generated.swift
+  targets:
+  - NumbersLightTests
+  testable:
+  - NumbersLight
+  import:
+  - UIKit
