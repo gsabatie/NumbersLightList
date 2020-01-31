@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 //sourcery: AutoMockable
 protocol NumbersLightListViewProtocol: class{
@@ -29,17 +30,19 @@ protocol NumbersLightListViewEventResponderProtocol {
 
 //sourcery: AutoMockable
 protocol NumbersLightListPresentationProtocol: class {
-
+    func presentLighNumbers()
 }
 
 //sourcery: AutoMockable
 protocol NumbersLightListUseCaseProtocol: class {
+    var isNetworkReachable: Bool { get }
     func getLightNumber(completion: @escaping NumberLightCompletionBlock)
 
 }
 
 //sourcery: AutoMockable
 protocol NumbersLightListInteractorOutputProtocol: class {
+    func reachabilityDidChange(status:  NetworkReachabilityManager.NetworkReachabilityStatus)
 
 }
 

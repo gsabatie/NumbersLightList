@@ -8,6 +8,8 @@
 
 import Foundation
 
+import Alamofire
+
 final class NumbersLightListPresenter {
     
     // MARK: Dependency inversion variable 
@@ -16,7 +18,7 @@ final class NumbersLightListPresenter {
     var interactor: NumbersLightListUseCaseProtocol?
     
     // MARK: Instance Variable
-    
+    var reachabilityStatus: NetworkReachabilityManager.NetworkReachabilityStatus?
     
     // MARK: Constructors
     init(
@@ -33,43 +35,47 @@ final class NumbersLightListPresenter {
 
 // MARK: NumbersLightListPresentationProtocol
 extension NumbersLightListPresenter: NumbersLightListPresentationProtocol {
-    
+    func presentLighNumbers() {
+        self.view?.isLoading = true
+                   self.interactor?.getLightNumber{ (result: Swift.Result<[NumberLight], Error>) in
+                                    self.view?.isLoading = false
+                                    switch result {
+                                    case .success( let lightNumbers):
+                                        self.view?.numberLight = lightNumbers
+                                    case .failure(let error):
+                                      self.view?.display(errorMessage: error.localizedDescription)
+                                    }
+                                }
+    }
 }
 
 // MARK: NumbersLightListInteractorOutputProtocol
 extension NumbersLightListPresenter: NumbersLightListInteractorOutputProtocol {
+    func reachabilityDidChange(status: NetworkReachabilityManager.NetworkReachabilityStatus) {
+        if status == .notReachable  && self.reachabilityStatus != nil {
+            self.view?.display(errorMessage: "Network not reachable")
+        } else if status == .reachable(.wwan) ||  status == .reachable(.ethernetOrWiFi) {
+            self.presentLighNumbers()
+        }
+        self.reachabilityStatus = status
+    }
     
 }
 
 // MARK: NumbersLightListViewEventResponderProtocol
 extension NumbersLightListPresenter: NumbersLightListViewEventResponderProtocol {
     func viewDidLoad() {
-        self.view?.isLoading = true
+        
     }
     
     func viewDidAppear() {
-        self.interactor?.getLightNumber{ (result: Result<[NumberLight], Error>) in
-            self.view?.isLoading = false
-            switch result {
-            case .success( let lightNumbers):
-                self.view?.numberLight = lightNumbers
-            case .failure(let error):
-                self.view?.display(errorMessage: error.localizedDescription)
-            }
+        guard let interactor = self.interactor else { return }
+        if interactor.isNetworkReachable  {
+            self.presentLighNumbers()
         }
     }
     
     func didRefreshTableView() {
-        self.view?.isLoading = true
-        
-        self.interactor?.getLightNumber{ (result: Result<[NumberLight], Error>) in
-                  self.view?.isLoading = false
-                  switch result {
-                  case .success( let lightNumbers):
-                      self.view?.numberLight = lightNumbers
-                  case .failure(let error):
-                    self.view?.display(errorMessage: error.localizedDescription)
-                  }
-              }
+        self.presentLighNumbers()
     }
 }

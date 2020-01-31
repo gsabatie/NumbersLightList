@@ -28,6 +28,7 @@
 		36A436C923E2160B00782BC4 /* NumberLightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436C723E2160B00782BC4 /* NumberLightTableViewCell.swift */; };
 		36A436CA23E2160B00782BC4 /* NumberLightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A436C823E2160B00782BC4 /* NumberLightTableViewCell.xib */; };
 		36A436CC23E2192600782BC4 /* UITableViewRegistrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */; };
+		36A436CE23E31C7700782BC4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436CD23E31C7700782BC4 /* NetworkManager.swift */; };
 		389B4560643D79510938F995 /* Pods_NumbersLight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD3C53405BE24492177125 /* Pods_NumbersLight.framework */; };
 		69D4D7E120700AF6B47A5B79 /* NumbersLightListPresenterSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE327D811DF00199C77464C /* NumbersLightListPresenterSpecs.swift */; };
 		890AD00CC9A36D3BEC8DC674 /* NumbersLightListviewcontrollerSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B501E5AC759B00C653E037 /* NumbersLightListviewcontrollerSpecs.swift */; };
@@ -88,6 +89,7 @@
 		36A436C723E2160B00782BC4 /* NumberLightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLightTableViewCell.swift; sourceTree = "<group>"; };
 		36A436C823E2160B00782BC4 /* NumberLightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberLightTableViewCell.xib; sourceTree = "<group>"; };
 		36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRegistrable.swift; sourceTree = "<group>"; };
+		36A436CD23E31C7700782BC4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		40483C23A1DD9E069E1E5C6F /* Pods_NumbersLight_NumbersLightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NumbersLight_NumbersLightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F0485ECA042C6D63985B28 /* NumbersLightListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListViewController.swift; sourceTree = "<group>"; };
 		4F17851D45EB5B54ABFE1616 /* NumbersLightListInteractorSpecs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListInteractorSpecs.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		36347C1C23DF4A5400059A32 = {
 			isa = PBXGroup;
 			children = (
+				36A436CD23E31C7700782BC4 /* NetworkManager.swift */,
 				36347C2723DF4A5400059A32 /* NumbersLight */,
 				36347C3E23DF4A5700059A32 /* NumbersLightTests */,
 				36347C4923DF4A5700059A32 /* NumbersLightUITests */,
@@ -706,6 +709,7 @@
 				927D870F4C31BA19E9F5FB14 /* NumbersLightListConfigurator.swift in Sources */,
 				36A436C423E08B4100782BC4 /* NumberLight.swift in Sources */,
 				BAAD316F6092DD727B9D1267 /* NumbersLightListInitializer.swift in Sources */,
+				36A436CE23E31C7700782BC4 /* NetworkManager.swift in Sources */,
 				36A436CC23E2192600782BC4 /* UITableViewRegistrable.swift in Sources */,
 				CA66C56896DDB68C4362B05C /* NumbersLightListProtocols.swift in Sources */,
 			);

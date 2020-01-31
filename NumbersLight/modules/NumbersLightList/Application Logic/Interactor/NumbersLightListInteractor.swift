@@ -8,13 +8,24 @@
 
 import Foundation
 
+import Alamofire
+import EasyOSLogger
+
 final class NumbersLightListInteractor {
  
     // MARK: Dependency inversion variable 
     weak var output: NumbersLightListInteractorOutputProtocol?
 
     // MARK: Instance Variable
-     var numberLightService: NumberLightWebService
+    var numberLightService: NumberLightWebService
+    var isNetworkReachable: Bool {
+        guard let manager: NetworkReachabilityManager = self.manager else { return false }
+        return manager.isReachable
+    }
+    
+    let manager = NetworkReachabilityManager(host: "www.apple.com")
+
+   
 
     // MARK: Constructors
     init(
@@ -22,14 +33,22 @@ final class NumbersLightListInteractor {
         numberLightService: NumberLightWebService = NumberLightService()) {
         self.output = output
         self.numberLightService = numberLightService
+        self.manager?.listener = { status in
+             Log.debug("Network Status Changed: \(status)")
+            self.output?.reachabilityDidChange(status:  status)
+           }
+
+           manager?.startListening()
     }
+    
+   
 }
 
 // MARK: NumbersLightListUseCaseProtocol
 extension NumbersLightListInteractor: NumbersLightListUseCaseProtocol {
     func getLightNumber(completion: @escaping NumberLightCompletionBlock) {
         self.numberLightService.getTestObject {
-            (result: Result<[NumberLight], Error>) in
+            (result: Swift.Result<[NumberLight], Error>) in
             completion(result)
         }
     }
