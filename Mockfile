@@ -10,3 +10,4 @@ NumbersLightTests:
   - NumbersLight
   import:
   - UIKit
+  - Alamofire
