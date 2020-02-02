@@ -49,7 +49,7 @@ extension NumbersLightListInteractor {
                         numberightServiceMock: inout NumberLightWebServiceMock) -> NumbersLightListInteractor  {
         Perform(
             numberightServiceMock,
-            .getTestObject(completion: .any, perform: { (completion) in
+            .getTestObjects(completion: .any, perform: { (completion) in
                    completion(.success(numberLightTest))
                }))
        let interactor =

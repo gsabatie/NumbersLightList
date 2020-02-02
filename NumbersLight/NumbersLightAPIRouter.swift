@@ -12,19 +12,25 @@ import Alamofire
 enum NumbersLightAPIRouter: URLRequestConvertible {
     static let baseURLString = "https://dev.tapptic.com"
     
-    case numberLight
+    case numberLights
+    
+    case numberLight(name: String)
     
     func asURLRequest() throws -> URLRequest {
-        let path: String = {
+        let result: (path: String, parameters: Parameters?) = {
             switch self {
-            case .numberLight:
-               return "/test/json.php"
+            case .numberLights:
+               return ("/test/json.php", nil)
+            case let .numberLight(name):
+                let path: String = "/test/json.php"
+                let parammeter: Parameters = ["name" : name]
+                return (path, parammeter)
             }
         }()
         
         let url = try NumbersLightAPIRouter.baseURLString.asURL()
-        let urlRequest = URLRequest(url: url.appendingPathComponent(path))
+        let urlRequest = URLRequest(url: url.appendingPathComponent(result.path))
         
-        return try URLEncoding.default.encode(urlRequest, with: nil)
+        return try URLEncoding.default.encode(urlRequest, with: result.parameters)
     }
 }

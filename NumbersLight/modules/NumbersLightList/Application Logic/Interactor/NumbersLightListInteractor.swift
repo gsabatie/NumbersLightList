@@ -46,8 +46,8 @@ final class NumbersLightListInteractor {
 
 // MARK: NumbersLightListUseCaseProtocol
 extension NumbersLightListInteractor: NumbersLightListUseCaseProtocol {
-    func getLightNumber(completion: @escaping NumberLightCompletionBlock) {
-        self.numberLightService.getTestObject {
+    func getLightNumber(completion: @escaping NumberLightsCompletionBlock) {
+        self.numberLightService.getTestObjects {
             (result: Swift.Result<[NumberLight], Error>) in
             completion(result)
         }

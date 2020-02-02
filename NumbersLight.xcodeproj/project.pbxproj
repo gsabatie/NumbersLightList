@@ -30,7 +30,7 @@
 		36A436CA23E2160B00782BC4 /* NumberLightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A436C823E2160B00782BC4 /* NumberLightTableViewCell.xib */; };
 		36A436CC23E2192600782BC4 /* UITableViewRegistrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */; };
 		36A436CE23E31C7700782BC4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436CD23E31C7700782BC4 /* NetworkManager.swift */; };
-		36B8DB3423E59DDC00714E4D /* NumbersLightDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36B8DB3323E59DDC00714E4D /* NumbersLightDetailViewController.storyboard */; };
+		36B8DB3423E59DDC00714E4D /* NumbersLightDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36B8DB3323E59DDC00714E4D /* NumbersLightDetail.storyboard */; };
 		389B4560643D79510938F995 /* Pods_NumbersLight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD3C53405BE24492177125 /* Pods_NumbersLight.framework */; };
 		4F52D608BC09DD6C952A58D5 /* NumbersLightDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780484657DF5327D94BCBE6D /* NumbersLightDetailProtocols.swift */; };
 		5559BFFD90BB5FE1F92784F8 /* NumbersLightDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5BEBEC28E105E1453891D /* NumbersLightDetailConfigurator.swift */; };
@@ -103,7 +103,7 @@
 		36A436C823E2160B00782BC4 /* NumberLightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberLightTableViewCell.xib; sourceTree = "<group>"; };
 		36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRegistrable.swift; sourceTree = "<group>"; };
 		36A436CD23E31C7700782BC4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		36B8DB3323E59DDC00714E4D /* NumbersLightDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NumbersLightDetailViewController.storyboard; sourceTree = "<group>"; };
+		36B8DB3323E59DDC00714E4D /* NumbersLightDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NumbersLightDetail.storyboard; sourceTree = "<group>"; };
 		40483C23A1DD9E069E1E5C6F /* Pods_NumbersLight_NumbersLightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NumbersLight_NumbersLightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F0485ECA042C6D63985B28 /* NumbersLightListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListViewController.swift; sourceTree = "<group>"; };
 		4F17851D45EB5B54ABFE1616 /* NumbersLightListInteractorSpecs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListInteractorSpecs.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				B84458227D496109929BA52A /* NumbersLightDetailViewController.swift */,
-				36B8DB3323E59DDC00714E4D /* NumbersLightDetailViewController.storyboard */,
+				36B8DB3323E59DDC00714E4D /* NumbersLightDetail.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -718,7 +718,7 @@
 				36347C3223DF4A5700059A32 /* Assets.xcassets in Resources */,
 				36347C3023DF4A5400059A32 /* Main.storyboard in Resources */,
 				36A436C623E1FE8C00782BC4 /* NumbersLightListViewController.storyboard in Resources */,
-				36B8DB3423E59DDC00714E4D /* NumbersLightDetailViewController.storyboard in Resources */,
+				36B8DB3423E59DDC00714E4D /* NumbersLightDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

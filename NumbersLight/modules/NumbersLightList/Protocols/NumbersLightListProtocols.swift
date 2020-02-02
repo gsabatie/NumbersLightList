@@ -26,6 +26,8 @@ protocol NumbersLightListViewEventResponderProtocol {
     func viewDidAppear()
     
     func didRefreshTableView()
+    
+    func didSelectRowat(index: IndexPath)
 }
 
 //sourcery: AutoMockable
@@ -36,7 +38,8 @@ protocol NumbersLightListPresentationProtocol: class {
 //sourcery: AutoMockable
 protocol NumbersLightListUseCaseProtocol: class {
     var isNetworkReachable: Bool { get }
-    func getLightNumber(completion: @escaping NumberLightCompletionBlock)
+    func getLightNumber(completion: @escaping NumberLightsCompletionBlock)
+    
 
 }
 
@@ -49,4 +52,5 @@ protocol NumbersLightListInteractorOutputProtocol: class {
 //sourcery: AutoMockable
 protocol NumbersLightListRouterProtocol: class {
     func present(from viewController:UIViewController)
+    func pushDetailView(name: String)
 }

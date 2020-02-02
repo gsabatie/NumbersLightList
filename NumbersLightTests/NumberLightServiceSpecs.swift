@@ -19,9 +19,19 @@ final class NumberLightServiceSpecs: QuickSpec {
         describe("Get test Objects") {
             let numberLightService: NumberLightService = NumberLightService()
             it("should return a list of numberLight object") {
-                numberLightService.getTestObject{
+                numberLightService.getTestObjects {
                     (result: Result<[NumberLight], Error>) in
                     expect(try? result.get().count) > 0
+                }
+            }
+        }
+        describe("Get detail for a test object") {
+              let numberLightService: NumberLightService = NumberLightService()
+            it("should return a list of numberLight object") {
+                numberLightService.getTestObject(name: "1") {
+                    (result: Result<NumberLight, Error>) in
+                    expect(try? result.get().name) == "1"
+
                 }
             }
         }

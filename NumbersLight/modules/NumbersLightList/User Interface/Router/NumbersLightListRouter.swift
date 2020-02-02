@@ -12,7 +12,8 @@ import UIKit
 import StoryboardLoadable
 
 final class NumbersLightListRouter {
-
+    var detailRouter: NumbersLightDetailRouterProtocol?
+    var navigationController: UINavigationController?
 }
 
 // MARK:  NumbersLightListRouterProtocol 
@@ -21,4 +22,11 @@ extension NumbersLightListRouter: NumbersLightListRouterProtocol {
         let numberslightlistViewController =  UIStoryboard.loadViewController() as NumbersLightListViewController
         viewController.present(numberslightlistViewController, animated: true, completion: nil)
      }
+    
+    func pushDetailView(name: String) {
+        guard let navigationController: UINavigationController = self.navigationController else {
+            return
+        }
+        self.detailRouter?.push(name: name, from: navigationController)
+    }
 }

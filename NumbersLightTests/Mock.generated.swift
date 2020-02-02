@@ -55,27 +55,40 @@ open class NumberLightWebServiceMock: NumberLightWebService, Mock {
 
 
 
-    open func getTestObject(completion: @escaping NumberLightCompletionBlock) {
-        addInvocation(.m_getTestObject__completion_completion(Parameter<NumberLightCompletionBlock>.any))
-		let perform = methodPerformValue(.m_getTestObject__completion_completion(Parameter<NumberLightCompletionBlock>.any)) as? (@escaping NumberLightCompletionBlock) -> Void
+    open func getTestObjects(completion: @escaping NumberLightsCompletionBlock) {
+        addInvocation(.m_getTestObjects__completion_completion(Parameter<NumberLightsCompletionBlock>.any))
+		let perform = methodPerformValue(.m_getTestObjects__completion_completion(Parameter<NumberLightsCompletionBlock>.any)) as? (@escaping NumberLightsCompletionBlock) -> Void
 		perform?(`completion`)
+    }
+
+    open func getTestObject(name: String, completion: @escaping NumberLightCompletionBlock) {
+        addInvocation(.m_getTestObject__name_namecompletion_completion(Parameter<String>.value(`name`), Parameter<NumberLightCompletionBlock>.any))
+		let perform = methodPerformValue(.m_getTestObject__name_namecompletion_completion(Parameter<String>.value(`name`), Parameter<NumberLightCompletionBlock>.any)) as? (String, @escaping NumberLightCompletionBlock) -> Void
+		perform?(`name`, `completion`)
     }
 
 
     fileprivate enum MethodType {
-        case m_getTestObject__completion_completion(Parameter<NumberLightCompletionBlock>)
+        case m_getTestObjects__completion_completion(Parameter<NumberLightsCompletionBlock>)
+        case m_getTestObject__name_namecompletion_completion(Parameter<String>, Parameter<NumberLightCompletionBlock>)
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Bool {
             switch (lhs, rhs) {
-            case (.m_getTestObject__completion_completion(let lhsCompletion), .m_getTestObject__completion_completion(let rhsCompletion)):
+            case (.m_getTestObjects__completion_completion(let lhsCompletion), .m_getTestObjects__completion_completion(let rhsCompletion)):
                 guard Parameter.compare(lhs: lhsCompletion, rhs: rhsCompletion, with: matcher) else { return false } 
                 return true 
+            case (.m_getTestObject__name_namecompletion_completion(let lhsName, let lhsCompletion), .m_getTestObject__name_namecompletion_completion(let rhsName, let rhsCompletion)):
+                guard Parameter.compare(lhs: lhsName, rhs: rhsName, with: matcher) else { return false } 
+                guard Parameter.compare(lhs: lhsCompletion, rhs: rhsCompletion, with: matcher) else { return false } 
+                return true 
+            default: return false
             }
         }
 
         func intValue() -> Int {
             switch self {
-            case let .m_getTestObject__completion_completion(p0): return p0.intValue
+            case let .m_getTestObjects__completion_completion(p0): return p0.intValue
+            case let .m_getTestObject__name_namecompletion_completion(p0, p1): return p0.intValue + p1.intValue
             }
         }
     }
@@ -94,15 +107,19 @@ open class NumberLightWebServiceMock: NumberLightWebService, Mock {
     public struct Verify {
         fileprivate var method: MethodType
 
-        public static func getTestObject(completion: Parameter<NumberLightCompletionBlock>) -> Verify { return Verify(method: .m_getTestObject__completion_completion(`completion`))}
+        public static func getTestObjects(completion: Parameter<NumberLightsCompletionBlock>) -> Verify { return Verify(method: .m_getTestObjects__completion_completion(`completion`))}
+        public static func getTestObject(name: Parameter<String>, completion: Parameter<NumberLightCompletionBlock>) -> Verify { return Verify(method: .m_getTestObject__name_namecompletion_completion(`name`, `completion`))}
     }
 
     public struct Perform {
         fileprivate var method: MethodType
         var performs: Any
 
-        public static func getTestObject(completion: Parameter<NumberLightCompletionBlock>, perform: @escaping (@escaping NumberLightCompletionBlock) -> Void) -> Perform {
-            return Perform(method: .m_getTestObject__completion_completion(`completion`), performs: perform)
+        public static func getTestObjects(completion: Parameter<NumberLightsCompletionBlock>, perform: @escaping (@escaping NumberLightsCompletionBlock) -> Void) -> Perform {
+            return Perform(method: .m_getTestObjects__completion_completion(`completion`), performs: perform)
+        }
+        public static func getTestObject(name: Parameter<String>, completion: Parameter<NumberLightCompletionBlock>, perform: @escaping (String, @escaping NumberLightCompletionBlock) -> Void) -> Perform {
+            return Perform(method: .m_getTestObject__name_namecompletion_completion(`name`, `completion`), performs: perform)
         }
     }
 
@@ -1474,15 +1491,15 @@ open class NumbersLightListUseCaseProtocolMock: NumbersLightListUseCaseProtocol,
 
 
 
-    open func getLightNumber(completion: @escaping NumberLightCompletionBlock) {
-        addInvocation(.m_getLightNumber__completion_completion(Parameter<NumberLightCompletionBlock>.any))
-		let perform = methodPerformValue(.m_getLightNumber__completion_completion(Parameter<NumberLightCompletionBlock>.any)) as? (@escaping NumberLightCompletionBlock) -> Void
+    open func getLightNumber(completion: @escaping NumberLightsCompletionBlock) {
+        addInvocation(.m_getLightNumber__completion_completion(Parameter<NumberLightsCompletionBlock>.any))
+		let perform = methodPerformValue(.m_getLightNumber__completion_completion(Parameter<NumberLightsCompletionBlock>.any)) as? (@escaping NumberLightsCompletionBlock) -> Void
 		perform?(`completion`)
     }
 
 
     fileprivate enum MethodType {
-        case m_getLightNumber__completion_completion(Parameter<NumberLightCompletionBlock>)
+        case m_getLightNumber__completion_completion(Parameter<NumberLightsCompletionBlock>)
         case p_isNetworkReachable_get
 
         static func compareParameters(lhs: MethodType, rhs: MethodType, matcher: Matcher) -> Bool {
@@ -1520,7 +1537,7 @@ open class NumbersLightListUseCaseProtocolMock: NumbersLightListUseCaseProtocol,
     public struct Verify {
         fileprivate var method: MethodType
 
-        public static func getLightNumber(completion: Parameter<NumberLightCompletionBlock>) -> Verify { return Verify(method: .m_getLightNumber__completion_completion(`completion`))}
+        public static func getLightNumber(completion: Parameter<NumberLightsCompletionBlock>) -> Verify { return Verify(method: .m_getLightNumber__completion_completion(`completion`))}
         public static var isNetworkReachable: Verify { return Verify(method: .p_isNetworkReachable_get) }
     }
 
@@ -1528,7 +1545,7 @@ open class NumbersLightListUseCaseProtocolMock: NumbersLightListUseCaseProtocol,
         fileprivate var method: MethodType
         var performs: Any
 
-        public static func getLightNumber(completion: Parameter<NumberLightCompletionBlock>, perform: @escaping (@escaping NumberLightCompletionBlock) -> Void) -> Perform {
+        public static func getLightNumber(completion: Parameter<NumberLightsCompletionBlock>, perform: @escaping (@escaping NumberLightsCompletionBlock) -> Void) -> Perform {
             return Perform(method: .m_getLightNumber__completion_completion(`completion`), performs: perform)
         }
     }

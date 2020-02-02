@@ -20,6 +20,8 @@ final class NumbersLightListPresenter {
     // MARK: Instance Variable
     var reachabilityStatus: NetworkReachabilityManager.NetworkReachabilityStatus?
     
+    var numberLight: [NumberLight]?
+    
     // MARK: Constructors
     init(
         interactor: NumbersLightListUseCaseProtocol? = nil,
@@ -41,11 +43,16 @@ extension NumbersLightListPresenter: NumbersLightListPresentationProtocol {
                                     self.view?.isLoading = false
                                     switch result {
                                     case .success( let lightNumbers):
+                                        self.numberLight = lightNumbers
                                         self.view?.numberLight = lightNumbers
                                     case .failure(let error):
                                       self.view?.display(errorMessage: error.localizedDescription)
                                     }
                                 }
+    }
+    func presentDetail(numberLight: NumberLight) {
+        guard let name: String = numberLight.name else { return  }
+        self.router?.pushDetailView(name: name)
     }
 }
 
@@ -64,6 +71,11 @@ extension NumbersLightListPresenter: NumbersLightListInteractorOutputProtocol {
 
 // MARK: NumbersLightListViewEventResponderProtocol
 extension NumbersLightListPresenter: NumbersLightListViewEventResponderProtocol {
+    func didSelectRowat(index: IndexPath) {
+        guard let numberLights: [NumberLight] = self.numberLight else { return }
+        self.presentDetail(numberLight: numberLights[index.row])
+    }
+    
     func viewDidLoad() {
         
     }
@@ -78,4 +90,6 @@ extension NumbersLightListPresenter: NumbersLightListViewEventResponderProtocol 
     func didRefreshTableView() {
         self.presentLighNumbers()
     }
+    
+    
 }

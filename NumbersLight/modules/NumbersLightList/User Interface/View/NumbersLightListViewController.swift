@@ -88,6 +88,9 @@ final class NumbersLightListViewController: UIViewController, StoryboardLoadable
 }
 // MARK: - Extension UITableViewDelegate
 extension NumbersLightListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.output?.didSelectRowat(index: indexPath)
+    }
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         guard let cell: NumberLightTableViewCell =
             tableView.numberLightTableViewCellForRow(at: indexPath)
@@ -137,7 +140,9 @@ extension NumbersLightListViewController: UITableViewDataSource {
 extension NumbersLightListViewController: NumbersLightListViewProtocol {
     func display(errorMessage: String) {
         self.errorAlertController.message = errorMessage
+        if !self.errorAlertController.isBeingPresented {
                self.present(self.errorAlertController, animated: true, completion: nil)
+        }
     }
 }
 

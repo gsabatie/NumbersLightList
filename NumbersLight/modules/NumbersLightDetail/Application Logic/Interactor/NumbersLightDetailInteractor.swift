@@ -14,14 +14,18 @@ final class NumbersLightDetailInteractor {
     weak var output: NumbersLightDetailInteractorOutputProtocol?
 
     // MARK: Instance Variable
-
+ var numberLightService: NumberLightWebService
     // MARK: Constructors
-    init(output: NumbersLightDetailInteractorOutputProtocol? = nil) {
-        self.output = output
+    init(output: NumbersLightDetailInteractorOutputProtocol? = nil,
+         numberLightService: NumberLightWebService = NumberLightService()) {
+         self.output = output
+         self.numberLightService = numberLightService
     }
 }
 
 // MARK: NumbersLightDetailUseCaseProtocol
 extension NumbersLightDetailInteractor: NumbersLightDetailUseCaseProtocol {
-
+    func getNumberLight(name: String, completion: @escaping NumberLightCompletionBlock) {
+        self.numberLightService.getTestObject(name: name, completion: completion)
+    }
 }

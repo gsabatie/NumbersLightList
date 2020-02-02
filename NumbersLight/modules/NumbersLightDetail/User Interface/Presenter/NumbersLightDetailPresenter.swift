@@ -16,6 +16,7 @@ final class NumbersLightDetailPresenter {
     var interactor: NumbersLightDetailUseCaseProtocol?
 
     // MARK: Instance Variable
+    var name: String?
 
     // MARK: Constructors
     init(interactor: NumbersLightDetailUseCaseProtocol? = nil, router: NumbersLightDetailRouterProtocol? = nil, view: NumbersLightDetailViewProtocol? = nil) {
@@ -29,7 +30,10 @@ final class NumbersLightDetailPresenter {
 
 // MARK: NumbersLightDetailPresentationProtocol
 extension NumbersLightDetailPresenter: NumbersLightDetailPresentationProtocol {
-
+    func presentnumberLightDetail(name: String) {
+        
+        self.name = name
+    }
 }
 
 // MARK: NumbersLightDetailInteractorOutputProtocol
@@ -42,4 +46,21 @@ extension NumbersLightDetailPresenter: NumbersLightDetailViewEventResponderProto
      func viewDidLoad() {
          
      }
+    
+    func viewDidAppear() {
+        guard let name: String = self.name else { return }
+        self.view?.isLoading = true
+        self.interactor?.getNumberLight(name: name) { (result: Result<NumberLight, Error>) in
+            
+            DispatchQueue.main.async {
+                self.view?.isLoading = false
+                switch result {
+                case .success(let numberLight):
+                    self.view?.numberLight = numberLight
+                case .failure(let error):
+                    return
+                }
+            }
+        }
+    }
 }
