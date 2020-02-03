@@ -258,8 +258,7 @@
 			children = (
 				46F0485ECA042C6D63985B28 /* NumbersLightListViewController.swift */,
 				36A436C523E1FE8C00782BC4 /* NumbersLightListViewController.storyboard */,
-				36A436C723E2160B00782BC4 /* NumberLightTableViewCell.swift */,
-				36A436C823E2160B00782BC4 /* NumberLightTableViewCell.xib */,
+				366E2ECD23E829EA00CB95C3 /* NumberLightTableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +331,15 @@
 				36347C4C23DF4A5700059A32 /* Info.plist */,
 			);
 			path = NumbersLightUITests;
+			sourceTree = "<group>";
+		};
+		366E2ECD23E829EA00CB95C3 /* NumberLightTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				36A436C723E2160B00782BC4 /* NumberLightTableViewCell.swift */,
+				36A436C823E2160B00782BC4 /* NumberLightTableViewCell.xib */,
+			);
+			path = NumberLightTableViewCell;
 			sourceTree = "<group>";
 		};
 		36A436B023E02F5000782BC4 /* NumbersLightList */ = {

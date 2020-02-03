@@ -9,17 +9,17 @@
 import Foundation
 
 final class NumbersLightDetailInteractor {
- 
+    
     // MARK: Dependency inversion variable 
     weak var output: NumbersLightDetailInteractorOutputProtocol?
-
+    
     // MARK: Instance Variable
- var numberLightService: NumberLightWebService
+    var numberLightService: NumberLightWebService
     // MARK: Constructors
     init(output: NumbersLightDetailInteractorOutputProtocol? = nil,
          numberLightService: NumberLightWebService = NumberLightService()) {
-         self.output = output
-         self.numberLightService = numberLightService
+        self.output = output
+        self.numberLightService = numberLightService
     }
 }
 

@@ -12,10 +12,10 @@ import Alamofire
 import EasyOSLogger
 
 final class NumbersLightListInteractor {
- 
+    
     // MARK: Dependency inversion variable 
     weak var output: NumbersLightListInteractorOutputProtocol?
-
+    
     // MARK: Instance Variable
     var numberLightService: NumberLightWebService
     var isNetworkReachable: Bool {
@@ -23,25 +23,21 @@ final class NumbersLightListInteractor {
         return manager.isReachable
     }
     
-    let manager = NetworkReachabilityManager(host: "www.apple.com")
-
-   
-
+    let manager: NetworkReachabilityManager? = NetworkReachabilityManager(host: "dev.tapptic.com")
+    
     // MARK: Constructors
     init(
         output: NumbersLightListInteractorOutputProtocol? = nil,
-        numberLightService: NumberLightWebService = NumberLightService()) {
+        numberLightService: NumberLightWebService = NumberLightService()
+    ) {
         self.output = output
         self.numberLightService = numberLightService
         self.manager?.listener = { status in
-             Log.debug("Network Status Changed: \(status)")
+            Log.debug("Network Status Changed: \(status)")
             self.output?.reachabilityDidChange(status:  status)
-           }
-
-           manager?.startListening()
+        }
+        self.manager?.startListening()
     }
-    
-   
 }
 
 // MARK: NumbersLightListUseCaseProtocol

@@ -13,7 +13,7 @@ import Alamofire
 import StoryboardLoadable
 
 final class NumbersLightDetailViewController: UIViewController, StoryboardLoadable {
-
+    
     // MARK: IBOutlet
     @IBOutlet weak private var imageView: UIImageView!
     
@@ -22,7 +22,7 @@ final class NumbersLightDetailViewController: UIViewController, StoryboardLoadab
     
     // MARK: Dependency inversion variable
     var output: NumbersLightDetailViewEventResponderProtocol?
-
+    
     // MARK: Instance variable
     var numberLight: NumberLight? {
         didSet {
@@ -44,20 +44,21 @@ final class NumbersLightDetailViewController: UIViewController, StoryboardLoadab
     }
     
     var isLoading: Bool = false {
-              didSet {
-                  if self.isLoading {
-                      self.progresshud.show(in: self.view)
-                  } else {
-            
+        didSet {
+            if self.isLoading {
+                self.progresshud.show(in: self.view)
+            } else {
+                
                 self.progresshud.dismiss(animated: true)
-                  }
-              }
-          }
+            }
+        }
+    }
     
-     private var progresshud: JGProgressHUD = JGProgressHUD(style: .dark)
+    private var progresshud: JGProgressHUD = JGProgressHUD(style: .dark)
+    
     private var errorAlertController: UIAlertController =
-       UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
-
+        UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,9 +74,9 @@ final class NumbersLightDetailViewController: UIViewController, StoryboardLoadab
 // MARK: NumbersLightDetailViewProtocol
 extension NumbersLightDetailViewController: NumbersLightDetailViewProtocol {
     func display(errorMessage: String) {
-           self.errorAlertController.message = errorMessage
-           if !self.errorAlertController.isBeingPresented {
-                  self.present(self.errorAlertController, animated: true, completion: nil)
-           }
-       }
+        self.errorAlertController.message = errorMessage
+        if !self.errorAlertController.isBeingPresented {
+            self.present(self.errorAlertController, animated: true, completion: nil)
+        }
+    }
 }

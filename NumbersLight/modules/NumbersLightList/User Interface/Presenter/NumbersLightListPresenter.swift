@@ -37,19 +37,21 @@ final class NumbersLightListPresenter {
 
 // MARK: NumbersLightListPresentationProtocol
 extension NumbersLightListPresenter: NumbersLightListPresentationProtocol {
+    
     func presentLighNumbers() {
         self.view?.isLoading = true
-                   self.interactor?.getLightNumber{ (result: Swift.Result<[NumberLight], Error>) in
-                                    self.view?.isLoading = false
-                                    switch result {
-                                    case .success( let lightNumbers):
-                                        self.numberLight = lightNumbers
-                                        self.view?.numberLight = lightNumbers
-                                    case .failure(let error):
-                                      self.view?.display(errorMessage: error.localizedDescription)
-                                    }
-                                }
+        self.interactor?.getLightNumber{ (result: Swift.Result<[NumberLight], Error>) in
+            self.view?.isLoading = false
+            switch result {
+            case .success( let lightNumbers):
+                self.numberLight = lightNumbers
+                self.view?.numberLight = lightNumbers
+            case .failure(let error):
+                self.view?.display(errorMessage: error.localizedDescription)
+            }
+        }
     }
+    
     func presentDetail(numberLight: NumberLight) {
         guard let name: String = numberLight.name else { return  }
         self.router?.pushDetailView(name: name)
@@ -76,9 +78,7 @@ extension NumbersLightListPresenter: NumbersLightListViewEventResponderProtocol 
         self.presentDetail(numberLight: numberLights[index.row])
     }
     
-    func viewDidLoad() {
-        
-    }
+    func viewDidLoad() {}
     
     func viewDidAppear() {
         guard let interactor = self.interactor else { return }
@@ -90,6 +90,4 @@ extension NumbersLightListPresenter: NumbersLightListViewEventResponderProtocol 
     func didRefreshTableView() {
         self.presentLighNumbers()
     }
-    
-    
 }

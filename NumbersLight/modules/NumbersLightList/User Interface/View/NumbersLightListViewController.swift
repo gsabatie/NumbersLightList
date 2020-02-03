@@ -27,23 +27,23 @@ final class NumbersLightListViewController: UIViewController, StoryboardLoadable
     }
     
     var isLoading: Bool = false {
-           didSet {
-               if self.isLoading {
-                   self.progresshud.show(in: self.view)
-               } else {
-                    self.refreshControl.endRefreshing()
-                   self.progresshud.dismiss(animated: true)
-               }
-           }
-       }
+        didSet {
+            if self.isLoading {
+                self.progresshud.show(in: self.view)
+            } else {
+                self.refreshControl.endRefreshing()
+                self.progresshud.dismiss(animated: true)
+            }
+        }
+    }
     // MARK: Private instance variable
     private var progresshud: JGProgressHUD = JGProgressHUD(style: .dark)
     
     private var errorAlertController: UIAlertController =
-    UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
+        UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
     
     private var refreshControl: UIRefreshControl = UIRefreshControl()
-
+    
     
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -51,7 +51,9 @@ final class NumbersLightListViewController: UIViewController, StoryboardLoadable
         NumberLightTableViewCell.register(tableView: &self.tableView)
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
         self.splitViewController?.preferredDisplayMode = .allVisible
+        
         self.refreshControl
             .addTarget(
                 self,
@@ -69,6 +71,7 @@ final class NumbersLightListViewController: UIViewController, StoryboardLoadable
     
     override func viewDidAppear(_ animated: Bool) {
         self.output?.viewDidAppear()
+        super.viewDidAppear(true)
     }
     
     func configure(cell: NumberLightTableViewCell, numberLight: NumberLight) {
@@ -86,11 +89,13 @@ final class NumbersLightListViewController: UIViewController, StoryboardLoadable
         self.output?.didRefreshTableView()
     }
 }
+
 // MARK: - Extension UITableViewDelegate
 extension NumbersLightListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.output?.didSelectRowat(index: indexPath)
     }
+    
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         guard let cell: NumberLightTableViewCell =
             tableView.numberLightTableViewCellForRow(at: indexPath)
@@ -121,7 +126,6 @@ extension NumbersLightListViewController: UITableViewDataSource {
         else {
             tableView.deleteEmptyView()
         }
-
         return self.numberLight.count
     }
     
@@ -134,17 +138,17 @@ extension NumbersLightListViewController: UITableViewDataSource {
         return cell
     }
 }
-
+// MARK: - extension NumbersLightListViewProtocol
 extension NumbersLightListViewController: NumbersLightListViewProtocol {
     func display(errorMessage: String) {
         self.errorAlertController.message = errorMessage
         if !self.errorAlertController.isBeingPresented {
-               self.present(self.errorAlertController, animated: true, completion: nil)
+            self.present(self.errorAlertController, animated: true, completion: nil)
         }
     }
 }
 
-// MARK: private extension
+// MARK: - private extension
 private extension UITableView {
     func  numberLightTableViewCellForRow(at indexPath: IndexPath) -> NumberLightTableViewCell? {
         guard let cell: NumberLightTableViewCell = self.cellForRow(at: indexPath) as? NumberLightTableViewCell else {
@@ -188,7 +192,7 @@ private extension UITableView {
         messageLabel.leftAnchor.constraint(equalTo: emptyView.leftAnchor, constant: 20).isActive = true
         messageLabel.rightAnchor.constraint(equalTo: emptyView.rightAnchor, constant: -20).isActive = true
         
-    
+        
         self.backgroundView = emptyView
         self.separatorStyle = .none
     }

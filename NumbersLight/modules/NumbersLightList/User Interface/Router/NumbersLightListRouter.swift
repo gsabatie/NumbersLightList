@@ -19,8 +19,10 @@ final class NumbersLightListRouter {
 
 // MARK:  NumbersLightListRouterProtocol 
 extension NumbersLightListRouter: NumbersLightListRouterProtocol {
+    
      func present(from viewController:UIViewController) {
-        let numberslightlistViewController = UIStoryboard.loadViewController() as NumbersLightListViewController
+        let numberslightlistViewController: NumbersLightListViewController =
+            UIStoryboard.loadViewController() as NumbersLightListViewController
         viewController.present(numberslightlistViewController, animated: true, completion: nil)
      }
     
@@ -29,22 +31,25 @@ extension NumbersLightListRouter: NumbersLightListRouterProtocol {
             return
         }
         if splitViewController.viewControllers.count == 1 {
-            let detailsLightListViewController = UIStoryboard.loadViewController() as NumbersLightDetailViewController
-            if let presenter = detailsLightListViewController.output as? NumbersLightDetailPresenter {
+            let detailsLightListViewController: NumbersLightDetailViewController =
+                UIStoryboard.loadViewController() as NumbersLightDetailViewController
+            if let presenter: NumbersLightDetailPresenter =
+                detailsLightListViewController.output as? NumbersLightDetailPresenter
+            {
                 presenter.presentnumberLightDetail(name: name)
             }
             let navigation = UINavigationController()
             navigation.viewControllers.append(detailsLightListViewController)
             splitViewController.showDetailViewController(navigation, sender: self)
         } else {
-            guard let detailsLightListViewController = splitViewController.viewControllers.last as? NumbersLightDetailViewController,
-                let presenter = detailsLightListViewController.output as? NumbersLightDetailPresenter
+            guard let detailsLightListViewController: NumbersLightDetailViewController =
+                splitViewController.viewControllers.last as? NumbersLightDetailViewController,
+                let presenter: NumbersLightDetailPresenter =
+                detailsLightListViewController.output as? NumbersLightDetailPresenter
                 else {
                     return
             }
             presenter.presentnumberLightDetail(name: name)
-            
         }
-        
     }
 }
