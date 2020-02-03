@@ -16,34 +16,34 @@ import SwiftyMocky
 
 final class NumbersLightDetailPresenterSpecs: QuickSpec {
 
-    var presenter: NumbersLightDetailPresenter!
-    var interactorMock: NumbersLightDetailUseCaseProtocolMock!
-    var viewMock: NumbersLightDetailViewProtocolMock!
-    var router: NumbersLightDetailRouterProtocolMock!
+    var presenter: JapaneseNumeralDetailPresenter!
+    var interactorMock: JapaneseNumeralDetailUseCaseProtocolMock!
+    var viewMock: JapaneseNumeralDetailViewProtocolMock!
+    var router: JapaneseNumeralDetailRouterProtocolMock!
 
     override func spec() {
     
     }
 }
 
-extension NumbersLightDetailPresenter {
-    static func forTest(interactorMock: inout NumbersLightDetailUseCaseProtocol!,
-                         routerMock: NumbersLightDetailRouterProtocol?,
-                         viewMock: NumbersLightDetailViewProtocol?) -> NumbersLightDetailPresenter {
-       let presenter = NumbersLightDetailPresenter(interactor: interactorMock, router: routerMock, view: viewMock)
+extension JapaneseNumeralDetailPresenter {
+    static func forTest(interactorMock: inout JapaneseNumeralDetailUseCaseProtocol!,
+                         routerMock: JapaneseNumeralDetailRouterProtocol?,
+                         viewMock: JapaneseNumeralDetailViewProtocol?) -> JapaneseNumeralDetailPresenter {
+       let presenter = JapaneseNumeralDetailPresenter(interactor: interactorMock, router: routerMock, view: viewMock)
        
        return presenter
     }
 }
 
-fileprivate extension NumbersLightDetailUseCaseProtocolMock {
+fileprivate extension JapaneseNumeralDetailUseCaseProtocolMock {
 
 }
 
-fileprivate extension NumbersLightDetailViewProtocolMock {
+fileprivate extension JapaneseNumeralDetailViewProtocolMock {
     
 }
 
-fileprivate extension NumbersLightDetailRouterProtocolMock {
+fileprivate extension JapaneseNumeralDetailRouterProtocolMock {
     
 }

@@ -15,23 +15,23 @@ import SwiftyMocky
 
 final class NumbersLightDetailViewControllerSpecs: QuickSpec {
 
-    var viewController: NumbersLightDetailViewController!
-    var presenter: NumbersLightDetailViewEventResponderProtocolMock!
+    var viewController: JapaneseNumeralDetailViewController!
+    var presenter: JapaneseNumeralDetailViewEventResponderProtocolMock!
 
     override func spec() {
     
     }
 }
 
-extension NumbersLightDetailViewController {
-    static func forTest(presenterMock: inout NumbersLightDetailViewEventResponderProtocol) -> NumbersLightDetailViewController  {
-           let viewController = NumbersLightDetailViewController()
+extension JapaneseNumeralDetailViewController {
+    static func forTest(presenterMock: inout JapaneseNumeralDetailViewEventResponderProtocol) -> JapaneseNumeralDetailViewController  {
+           let viewController = JapaneseNumeralDetailViewController()
            viewController.output = presenterMock
        
            return viewController
     }
 }
 
-fileprivate extension NumbersLightDetailViewEventResponderProtocolMock {
+fileprivate extension JapaneseNumeralListViewEventResponderProtocol {
 
 }

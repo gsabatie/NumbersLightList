@@ -8,48 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		113B9C17B86467314FD15193 /* Pods_NumbersLightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88F976623E5D8B68F34E4A9 /* Pods_NumbersLightTests.framework */; };
-		29606D8BA6BB74D3E7096A22 /* NumbersLightListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5E44D49DF6330B330E182 /* NumbersLightListPresenter.swift */; };
-		2EEDA008D06E1412A6AB3F5F /* NumbersLightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84458227D496109929BA52A /* NumbersLightDetailViewController.swift */; };
+		29606D8BA6BB74D3E7096A22 /* JapaneseNumeralListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5E44D49DF6330B330E182 /* JapaneseNumeralListPresenter.swift */; };
+		2EEDA008D06E1412A6AB3F5F /* JapaneseNumeralDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84458227D496109929BA52A /* JapaneseNumeralDetailViewController.swift */; };
 		36347C2923DF4A5400059A32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36347C2823DF4A5400059A32 /* AppDelegate.swift */; };
 		36347C3223DF4A5700059A32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36347C3123DF4A5700059A32 /* Assets.xcassets */; };
 		36347C3523DF4A5700059A32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36347C3323DF4A5700059A32 /* LaunchScreen.storyboard */; };
 		36347C4023DF4A5700059A32 /* NumbersLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36347C3F23DF4A5700059A32 /* NumbersLightTests.swift */; };
 		36347C4B23DF4A5700059A32 /* NumbersLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36347C4A23DF4A5700059A32 /* NumbersLightUITests.swift */; };
+		363B6A4223E854C800E54563 /* JapaneseNumeralListPresenterSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436B623E02F5000782BC4 /* JapaneseNumeralListPresenterSpecs.swift */; };
 		366E2ECF23E82C4600CB95C3 /* UIViewController+displayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E2ECE23E82C4600CB95C3 /* UIViewController+displayError.swift */; };
-		36A436AD23E02C9100782BC4 /* NumbersLightAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436AC23E02C9100782BC4 /* NumbersLightAPIRouter.swift */; };
-		36A436AF23E02F2B00782BC4 /* NumberLightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436AE23E02F2B00782BC4 /* NumberLightService.swift */; };
-		36A436BB23E02F5000782BC4 /* NumbersLightListInteractorSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436B323E02F5000782BC4 /* NumbersLightListInteractorSpecs.swift */; };
-		36A436BD23E02F5000782BC4 /* NumbersLightListviewcontrollerSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436B823E02F5000782BC4 /* NumbersLightListviewcontrollerSpecs.swift */; };
-		36A436BE23E02F5000782BC4 /* NumbersLightListRouterSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436BA23E02F5000782BC4 /* NumbersLightListRouterSpecs.swift */; };
+		36A436AD23E02C9100782BC4 /* JapaneseNumeralAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436AC23E02C9100782BC4 /* JapaneseNumeralAPIRouter.swift */; };
+		36A436AF23E02F2B00782BC4 /* TappticJapaneseNumeralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436AE23E02F2B00782BC4 /* TappticJapaneseNumeralService.swift */; };
+		36A436BB23E02F5000782BC4 /* JapaneseNumeralListInteractorSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436B323E02F5000782BC4 /* JapaneseNumeralListInteractorSpecs.swift */; };
+		36A436BE23E02F5000782BC4 /* JapaneseNumeralListRouterSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436BA23E02F5000782BC4 /* JapaneseNumeralListRouterSpecs.swift */; };
 		36A436C023E02F7400782BC4 /* NumberLightServiceSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436BF23E02F7400782BC4 /* NumberLightServiceSpecs.swift */; };
 		36A436C223E031C700782BC4 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436C123E031C700782BC4 /* Mock.generated.swift */; };
-		36A436C423E08B4100782BC4 /* NumberLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436C323E08B4100782BC4 /* NumberLight.swift */; };
-		36A436C623E1FE8C00782BC4 /* NumbersLightListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A436C523E1FE8C00782BC4 /* NumbersLightListViewController.storyboard */; };
-		36A436C923E2160B00782BC4 /* NumberLightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436C723E2160B00782BC4 /* NumberLightTableViewCell.swift */; };
-		36A436CA23E2160B00782BC4 /* NumberLightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A436C823E2160B00782BC4 /* NumberLightTableViewCell.xib */; };
+		36A436C423E08B4100782BC4 /* JapaneseNumeral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436C323E08B4100782BC4 /* JapaneseNumeral.swift */; };
+		36A436C623E1FE8C00782BC4 /* JapaneseNumeralTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A436C523E1FE8C00782BC4 /* JapaneseNumeralTableViewController.storyboard */; };
+		36A436C923E2160B00782BC4 /* JapaneseNumeralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436C723E2160B00782BC4 /* JapaneseNumeralTableViewCell.swift */; };
+		36A436CA23E2160B00782BC4 /* JapaneseNumeralTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A436C823E2160B00782BC4 /* JapaneseNumeralTableViewCell.xib */; };
 		36A436CC23E2192600782BC4 /* UITableViewRegistrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */; };
 		36A436CE23E31C7700782BC4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436CD23E31C7700782BC4 /* NetworkManager.swift */; };
-		36B8DB3423E59DDC00714E4D /* NumbersLightDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36B8DB3323E59DDC00714E4D /* NumbersLightDetail.storyboard */; };
+		36B8DB3423E59DDC00714E4D /* JapaneseNumeralDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36B8DB3323E59DDC00714E4D /* JapaneseNumeralDetail.storyboard */; };
 		389B4560643D79510938F995 /* Pods_NumbersLight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD3C53405BE24492177125 /* Pods_NumbersLight.framework */; };
-		4F52D608BC09DD6C952A58D5 /* NumbersLightDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780484657DF5327D94BCBE6D /* NumbersLightDetailProtocols.swift */; };
-		5559BFFD90BB5FE1F92784F8 /* NumbersLightDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5BEBEC28E105E1453891D /* NumbersLightDetailConfigurator.swift */; };
-		69D4D7E120700AF6B47A5B79 /* NumbersLightListPresenterSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE327D811DF00199C77464C /* NumbersLightListPresenterSpecs.swift */; };
-		7DDA3B84A45E79004C182440 /* NumbersLightDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B02257357AA473A28C3E55 /* NumbersLightDetailRouter.swift */; };
-		890AD00CC9A36D3BEC8DC674 /* NumbersLightListviewcontrollerSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B501E5AC759B00C653E037 /* NumbersLightListviewcontrollerSpecs.swift */; };
+		4F52D608BC09DD6C952A58D5 /* JapaneseNumeralDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780484657DF5327D94BCBE6D /* JapaneseNumeralDetailProtocols.swift */; };
+		5559BFFD90BB5FE1F92784F8 /* JapaneseNumeralDetailModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C5BEBEC28E105E1453891D /* JapaneseNumeralDetailModuleConfigurator.swift */; };
+		7DDA3B84A45E79004C182440 /* JapaneseNumeralDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B02257357AA473A28C3E55 /* JapaneseNumeralDetailRouter.swift */; };
 		927D870F4C31BA19E9F5FB14 /* NumbersLightListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8549FE8B4B1A9834E50B3EB /* NumbersLightListConfigurator.swift */; };
-		97B4C29B67EA8E6CD3C89E47 /* NumbersLightListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F0485ECA042C6D63985B28 /* NumbersLightListViewController.swift */; };
-		991EEB647A5986E808F39B60 /* NumbersLightDetailInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343E2388B8501583F718069B /* NumbersLightDetailInitializer.swift */; };
-		A6AB58B7D5597A1F6C1FD13F /* NumbersLightDetailInteractorSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568B3891C80812FD6B020776 /* NumbersLightDetailInteractorSpecs.swift */; };
-		AA94CDE1464F321E9C62C3DC /* NumbersLightDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04E89FDC1754D9CB52F56D6 /* NumbersLightDetailInteractor.swift */; };
-		B36A96B0787FD01DE9BA5B8F /* NumbersLightListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC5BD9D4E12D35CDC2AFFE /* NumbersLightListRouter.swift */; };
+		97B4C29B67EA8E6CD3C89E47 /* JapaneseNumeralTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F0485ECA042C6D63985B28 /* JapaneseNumeralTableViewController.swift */; };
+		991EEB647A5986E808F39B60 /* JapaneseNumeralDetailModuleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343E2388B8501583F718069B /* JapaneseNumeralDetailModuleInitializer.swift */; };
+		AA94CDE1464F321E9C62C3DC /* JapaneseNumeralDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04E89FDC1754D9CB52F56D6 /* JapaneseNumeralDetailInteractor.swift */; };
+		B36A96B0787FD01DE9BA5B8F /* JapaneseNumeralListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC5BD9D4E12D35CDC2AFFE /* JapaneseNumeralListRouter.swift */; };
 		BAAD316F6092DD727B9D1267 /* NumbersLightListInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A91F1BE01E816D4BEC214 /* NumbersLightListInitializer.swift */; };
-		BFF3412924859C64EFE9613F /* NumbersLightDetailviewcontrollerSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3EC3B7DDB583CB91E5D8E3 /* NumbersLightDetailviewcontrollerSpecs.swift */; };
-		CA0ED75E4EC43128EF2262BF /* NumbersLightDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ACB72254339BDF1AB605EF /* NumbersLightDetailPresenter.swift */; };
+		CA0ED75E4EC43128EF2262BF /* JapaneseNumeralDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ACB72254339BDF1AB605EF /* JapaneseNumeralDetailPresenter.swift */; };
 		CA66C56896DDB68C4362B05C /* NumbersLightListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CEED1647C7A4E84D0FD9C8 /* NumbersLightListProtocols.swift */; };
-		D0D3A01020BFEE53111CBAD2 /* NumbersLightDetailPresenterSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44E0F8381B68B039B4E1C1 /* NumbersLightDetailPresenterSpecs.swift */; };
-		E7889209EDD6C916EAE7F8BA /* NumbersLightListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4979D536AEA58912CF782 /* NumbersLightListInteractor.swift */; };
+		E7889209EDD6C916EAE7F8BA /* JapaneseNumeralListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F4979D536AEA58912CF782 /* JapaneseNumeralListInteractor.swift */; };
 		E99C5FEC6ED3978DA10A0AC0 /* Pods_NumbersLight_NumbersLightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40483C23A1DD9E069E1E5C6F /* Pods_NumbersLight_NumbersLightUITests.framework */; };
-		F510C5116A7ED88B6376D186 /* NumbersLightDetailRouterSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D995CCBD4F8838400678BB43 /* NumbersLightDetailRouterSpecs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +68,7 @@
 		12B501E5AC759B00C653E037 /* NumbersLightListviewcontrollerSpecs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListviewcontrollerSpecs.swift; sourceTree = "<group>"; };
 		1CBE446D7E4912E2A70409CF /* Pods-NumbersLight-NumbersLightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumbersLight-NumbersLightUITests.debug.xcconfig"; path = "Target Support Files/Pods-NumbersLight-NumbersLightUITests/Pods-NumbersLight-NumbersLightUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1CE8C2BD0B5F0786A5ED8C26 /* Pods-NumbersLight-NumbersLightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumbersLight-NumbersLightUITests.release.xcconfig"; path = "Target Support Files/Pods-NumbersLight-NumbersLightUITests/Pods-NumbersLight-NumbersLightUITests.release.xcconfig"; sourceTree = "<group>"; };
-		343E2388B8501583F718069B /* NumbersLightDetailInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightDetailInitializer.swift; sourceTree = "<group>"; };
+		343E2388B8501583F718069B /* JapaneseNumeralDetailModuleInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralDetailModuleInitializer.swift; sourceTree = "<group>"; };
 		36347C2523DF4A5400059A32 /* NumbersLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumbersLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36347C2823DF4A5400059A32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36347C3123DF4A5700059A32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,46 +81,46 @@
 		36347C4A23DF4A5700059A32 /* NumbersLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersLightUITests.swift; sourceTree = "<group>"; };
 		36347C4C23DF4A5700059A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		366E2ECE23E82C4600CB95C3 /* UIViewController+displayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+displayError.swift"; sourceTree = "<group>"; };
-		36A436AC23E02C9100782BC4 /* NumbersLightAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersLightAPIRouter.swift; sourceTree = "<group>"; };
-		36A436AE23E02F2B00782BC4 /* NumberLightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLightService.swift; sourceTree = "<group>"; };
-		36A436B323E02F5000782BC4 /* NumbersLightListInteractorSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersLightListInteractorSpecs.swift; sourceTree = "<group>"; };
-		36A436B623E02F5000782BC4 /* NumbersLightListPresenterSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersLightListPresenterSpecs.swift; sourceTree = "<group>"; };
-		36A436B823E02F5000782BC4 /* NumbersLightListviewcontrollerSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersLightListviewcontrollerSpecs.swift; sourceTree = "<group>"; };
-		36A436BA23E02F5000782BC4 /* NumbersLightListRouterSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersLightListRouterSpecs.swift; sourceTree = "<group>"; };
+		36A436AC23E02C9100782BC4 /* JapaneseNumeralAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralAPIRouter.swift; sourceTree = "<group>"; };
+		36A436AE23E02F2B00782BC4 /* TappticJapaneseNumeralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappticJapaneseNumeralService.swift; sourceTree = "<group>"; };
+		36A436B323E02F5000782BC4 /* JapaneseNumeralListInteractorSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralListInteractorSpecs.swift; sourceTree = "<group>"; };
+		36A436B623E02F5000782BC4 /* JapaneseNumeralListPresenterSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralListPresenterSpecs.swift; sourceTree = "<group>"; };
+		36A436B823E02F5000782BC4 /* ListviewcontrollerSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListviewcontrollerSpecs.swift; sourceTree = "<group>"; };
+		36A436BA23E02F5000782BC4 /* JapaneseNumeralListRouterSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralListRouterSpecs.swift; sourceTree = "<group>"; };
 		36A436BF23E02F7400782BC4 /* NumberLightServiceSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLightServiceSpecs.swift; sourceTree = "<group>"; };
 		36A436C123E031C700782BC4 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
-		36A436C323E08B4100782BC4 /* NumberLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLight.swift; sourceTree = "<group>"; };
-		36A436C523E1FE8C00782BC4 /* NumbersLightListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NumbersLightListViewController.storyboard; sourceTree = "<group>"; };
-		36A436C723E2160B00782BC4 /* NumberLightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLightTableViewCell.swift; sourceTree = "<group>"; };
-		36A436C823E2160B00782BC4 /* NumberLightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberLightTableViewCell.xib; sourceTree = "<group>"; };
+		36A436C323E08B4100782BC4 /* JapaneseNumeral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseNumeral.swift; sourceTree = "<group>"; };
+		36A436C523E1FE8C00782BC4 /* JapaneseNumeralTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JapaneseNumeralTableViewController.storyboard; sourceTree = "<group>"; };
+		36A436C723E2160B00782BC4 /* JapaneseNumeralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralTableViewCell.swift; sourceTree = "<group>"; };
+		36A436C823E2160B00782BC4 /* JapaneseNumeralTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JapaneseNumeralTableViewCell.xib; sourceTree = "<group>"; };
 		36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRegistrable.swift; sourceTree = "<group>"; };
 		36A436CD23E31C7700782BC4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		36B8DB3323E59DDC00714E4D /* NumbersLightDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NumbersLightDetail.storyboard; sourceTree = "<group>"; };
+		36B8DB3323E59DDC00714E4D /* JapaneseNumeralDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JapaneseNumeralDetail.storyboard; sourceTree = "<group>"; };
 		40483C23A1DD9E069E1E5C6F /* Pods_NumbersLight_NumbersLightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NumbersLight_NumbersLightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46F0485ECA042C6D63985B28 /* NumbersLightListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListViewController.swift; sourceTree = "<group>"; };
+		46F0485ECA042C6D63985B28 /* JapaneseNumeralTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralTableViewController.swift; sourceTree = "<group>"; };
 		4F17851D45EB5B54ABFE1616 /* NumbersLightListInteractorSpecs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListInteractorSpecs.swift; sourceTree = "<group>"; };
 		568B3891C80812FD6B020776 /* NumbersLightDetailInteractorSpecs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightDetailInteractorSpecs.swift; sourceTree = "<group>"; };
-		63F4979D536AEA58912CF782 /* NumbersLightListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListInteractor.swift; sourceTree = "<group>"; };
+		63F4979D536AEA58912CF782 /* JapaneseNumeralListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralListInteractor.swift; sourceTree = "<group>"; };
 		6DE327D811DF00199C77464C /* NumbersLightListPresenterSpecs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListPresenterSpecs.swift; sourceTree = "<group>"; };
-		780484657DF5327D94BCBE6D /* NumbersLightDetailProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightDetailProtocols.swift; sourceTree = "<group>"; };
-		7EB5E44D49DF6330B330E182 /* NumbersLightListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListPresenter.swift; sourceTree = "<group>"; };
+		780484657DF5327D94BCBE6D /* JapaneseNumeralDetailProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralDetailProtocols.swift; sourceTree = "<group>"; };
+		7EB5E44D49DF6330B330E182 /* JapaneseNumeralListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralListPresenter.swift; sourceTree = "<group>"; };
 		88CEED1647C7A4E84D0FD9C8 /* NumbersLightListProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListProtocols.swift; sourceTree = "<group>"; };
-		89ACB72254339BDF1AB605EF /* NumbersLightDetailPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightDetailPresenter.swift; sourceTree = "<group>"; };
+		89ACB72254339BDF1AB605EF /* JapaneseNumeralDetailPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralDetailPresenter.swift; sourceTree = "<group>"; };
 		937F7BBA4698665310361354 /* Pods-NumbersLight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumbersLight.release.xcconfig"; path = "Target Support Files/Pods-NumbersLight/Pods-NumbersLight.release.xcconfig"; sourceTree = "<group>"; };
 		98372E2953DA4F575BD5FDB4 /* Pods-NumbersLightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumbersLightTests.release.xcconfig"; path = "Target Support Files/Pods-NumbersLightTests/Pods-NumbersLightTests.release.xcconfig"; sourceTree = "<group>"; };
-		A0B02257357AA473A28C3E55 /* NumbersLightDetailRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightDetailRouter.swift; sourceTree = "<group>"; };
-		B04E89FDC1754D9CB52F56D6 /* NumbersLightDetailInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightDetailInteractor.swift; sourceTree = "<group>"; };
-		B84458227D496109929BA52A /* NumbersLightDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightDetailViewController.swift; sourceTree = "<group>"; };
+		A0B02257357AA473A28C3E55 /* JapaneseNumeralDetailRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralDetailRouter.swift; sourceTree = "<group>"; };
+		B04E89FDC1754D9CB52F56D6 /* JapaneseNumeralDetailInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralDetailInteractor.swift; sourceTree = "<group>"; };
+		B84458227D496109929BA52A /* JapaneseNumeralDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralDetailViewController.swift; sourceTree = "<group>"; };
 		BE5C10E3E99BC55A637AF874 /* NumbersLightListRouterSpecs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListRouterSpecs.swift; sourceTree = "<group>"; };
 		C2C0E80A038EAE6FA2D6402A /* Pods-NumbersLight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumbersLight.debug.xcconfig"; path = "Target Support Files/Pods-NumbersLight/Pods-NumbersLight.debug.xcconfig"; sourceTree = "<group>"; };
-		C2C5BEBEC28E105E1453891D /* NumbersLightDetailConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightDetailConfigurator.swift; sourceTree = "<group>"; };
+		C2C5BEBEC28E105E1453891D /* JapaneseNumeralDetailModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralDetailModuleConfigurator.swift; sourceTree = "<group>"; };
 		C3174E7FB3E56939DB168375 /* Pods-NumbersLightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NumbersLightTests.debug.xcconfig"; path = "Target Support Files/Pods-NumbersLightTests/Pods-NumbersLightTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C88F976623E5D8B68F34E4A9 /* Pods_NumbersLightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NumbersLightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC44E0F8381B68B039B4E1C1 /* NumbersLightDetailPresenterSpecs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightDetailPresenterSpecs.swift; sourceTree = "<group>"; };
 		D8549FE8B4B1A9834E50B3EB /* NumbersLightListConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListConfigurator.swift; sourceTree = "<group>"; };
 		D995CCBD4F8838400678BB43 /* NumbersLightDetailRouterSpecs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightDetailRouterSpecs.swift; sourceTree = "<group>"; };
 		DD3EC3B7DDB583CB91E5D8E3 /* NumbersLightDetailviewcontrollerSpecs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightDetailviewcontrollerSpecs.swift; sourceTree = "<group>"; };
-		EFCC5BD9D4E12D35CDC2AFFE /* NumbersLightListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListRouter.swift; sourceTree = "<group>"; };
+		EFCC5BD9D4E12D35CDC2AFFE /* JapaneseNumeralListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralListRouter.swift; sourceTree = "<group>"; };
 		FF0A91F1BE01E816D4BEC214 /* NumbersLightListInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightListInitializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,8 +183,8 @@
 		132E3382EFEDAD2A1CAAFDDD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B84458227D496109929BA52A /* NumbersLightDetailViewController.swift */,
-				36B8DB3323E59DDC00714E4D /* NumbersLightDetail.storyboard */,
+				B84458227D496109929BA52A /* JapaneseNumeralDetailViewController.swift */,
+				36B8DB3323E59DDC00714E4D /* JapaneseNumeralDetail.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,7 +200,7 @@
 		1C0444DC3D59321CAFDF8B15 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				780484657DF5327D94BCBE6D /* NumbersLightDetailProtocols.swift */,
+				780484657DF5327D94BCBE6D /* JapaneseNumeralDetailProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -219,7 +213,7 @@
 			path = "Application Logic";
 			sourceTree = "<group>";
 		};
-		209FCF181879CA9EAC6E177D /* NumbersLightDetail */ = {
+		209FCF181879CA9EAC6E177D /* JapaneseNumeralDetail */ = {
 			isa = PBXGroup;
 			children = (
 				7CFBBDA5DAA421A078FF1C75 /* User Interface */,
@@ -227,13 +221,13 @@
 				2C0D1FF88E8D793104CE4A56 /* Configuration */,
 				1C0444DC3D59321CAFDF8B15 /* Protocols */,
 			);
-			path = NumbersLightDetail;
+			path = JapaneseNumeralDetail;
 			sourceTree = "<group>";
 		};
 		2727A09B332EB995B5353101 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				7EB5E44D49DF6330B330E182 /* NumbersLightListPresenter.swift */,
+				7EB5E44D49DF6330B330E182 /* JapaneseNumeralListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -241,8 +235,8 @@
 		2C0D1FF88E8D793104CE4A56 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				C2C5BEBEC28E105E1453891D /* NumbersLightDetailConfigurator.swift */,
-				343E2388B8501583F718069B /* NumbersLightDetailInitializer.swift */,
+				C2C5BEBEC28E105E1453891D /* JapaneseNumeralDetailModuleConfigurator.swift */,
+				343E2388B8501583F718069B /* JapaneseNumeralDetailModuleInitializer.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -258,9 +252,9 @@
 		2F2A6924C42D0114F2970015 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				46F0485ECA042C6D63985B28 /* NumbersLightListViewController.swift */,
-				36A436C523E1FE8C00782BC4 /* NumbersLightListViewController.storyboard */,
-				366E2ECD23E829EA00CB95C3 /* NumberLightTableViewCell */,
+				46F0485ECA042C6D63985B28 /* JapaneseNumeralTableViewController.swift */,
+				36A436C523E1FE8C00782BC4 /* JapaneseNumeralTableViewController.storyboard */,
+				366E2ECD23E829EA00CB95C3 /* JapaneseNumeralTableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,12 +299,10 @@
 				36347C3123DF4A5700059A32 /* Assets.xcassets */,
 				36347C3323DF4A5700059A32 /* LaunchScreen.storyboard */,
 				36347C3623DF4A5700059A32 /* Info.plist */,
-				36A436AC23E02C9100782BC4 /* NumbersLightAPIRouter.swift */,
-				36A436C323E08B4100782BC4 /* NumberLight.swift */,
-				36A436AE23E02F2B00782BC4 /* NumberLightService.swift */,
-				366E2ECE23E82C4600CB95C3 /* UIViewController+displayError.swift */,
-				9FA79168F59652B9DEC4F369 /* modules */,
 				36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */,
+				366E2ECE23E82C4600CB95C3 /* UIViewController+displayError.swift */,
+				366E2ED023E836C800CB95C3 /* JapaneseNumeralService */,
+				9FA79168F59652B9DEC4F369 /* modules */,
 			);
 			path = NumbersLight;
 			sourceTree = "<group>";
@@ -319,7 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				36A436C123E031C700782BC4 /* Mock.generated.swift */,
-				36A436B023E02F5000782BC4 /* NumbersLightList */,
+				36A436B023E02F5000782BC4 /* JapaneseNumeralList */,
 				36347C3F23DF4A5700059A32 /* NumbersLightTests.swift */,
 				36347C4123DF4A5700059A32 /* Info.plist */,
 				36A436BF23E02F7400782BC4 /* NumberLightServiceSpecs.swift */,
@@ -336,22 +328,32 @@
 			path = NumbersLightUITests;
 			sourceTree = "<group>";
 		};
-		366E2ECD23E829EA00CB95C3 /* NumberLightTableViewCell */ = {
+		366E2ECD23E829EA00CB95C3 /* JapaneseNumeralTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				36A436C723E2160B00782BC4 /* NumberLightTableViewCell.swift */,
-				36A436C823E2160B00782BC4 /* NumberLightTableViewCell.xib */,
+				36A436C723E2160B00782BC4 /* JapaneseNumeralTableViewCell.swift */,
+				36A436C823E2160B00782BC4 /* JapaneseNumeralTableViewCell.xib */,
 			);
-			path = NumberLightTableViewCell;
+			path = JapaneseNumeralTableViewCell;
 			sourceTree = "<group>";
 		};
-		36A436B023E02F5000782BC4 /* NumbersLightList */ = {
+		366E2ED023E836C800CB95C3 /* JapaneseNumeralService */ = {
+			isa = PBXGroup;
+			children = (
+				36A436AC23E02C9100782BC4 /* JapaneseNumeralAPIRouter.swift */,
+				36A436C323E08B4100782BC4 /* JapaneseNumeral.swift */,
+				36A436AE23E02F2B00782BC4 /* TappticJapaneseNumeralService.swift */,
+			);
+			path = JapaneseNumeralService;
+			sourceTree = "<group>";
+		};
+		36A436B023E02F5000782BC4 /* JapaneseNumeralList */ = {
 			isa = PBXGroup;
 			children = (
 				36A436B123E02F5000782BC4 /* Application Logic */,
 				36A436B423E02F5000782BC4 /* User Interface */,
 			);
-			path = NumbersLightList;
+			path = JapaneseNumeralList;
 			sourceTree = "<group>";
 		};
 		36A436B123E02F5000782BC4 /* Application Logic */ = {
@@ -365,7 +367,7 @@
 		36A436B223E02F5000782BC4 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				36A436B323E02F5000782BC4 /* NumbersLightListInteractorSpecs.swift */,
+				36A436B323E02F5000782BC4 /* JapaneseNumeralListInteractorSpecs.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -383,7 +385,7 @@
 		36A436B523E02F5000782BC4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				36A436B623E02F5000782BC4 /* NumbersLightListPresenterSpecs.swift */,
+				36A436B623E02F5000782BC4 /* JapaneseNumeralListPresenterSpecs.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -391,7 +393,7 @@
 		36A436B723E02F5000782BC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				36A436B823E02F5000782BC4 /* NumbersLightListviewcontrollerSpecs.swift */,
+				36A436B823E02F5000782BC4 /* ListviewcontrollerSpecs.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -399,7 +401,7 @@
 		36A436B923E02F5000782BC4 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				36A436BA23E02F5000782BC4 /* NumbersLightListRouterSpecs.swift */,
+				36A436BA23E02F5000782BC4 /* JapaneseNumeralListRouterSpecs.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -430,7 +432,7 @@
 		62643D9BB3F1F1DEF404D634 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				A0B02257357AA473A28C3E55 /* NumbersLightDetailRouter.swift */,
+				A0B02257357AA473A28C3E55 /* JapaneseNumeralDetailRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -438,7 +440,7 @@
 		7A7ECA61A064B23693C6FA24 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				B04E89FDC1754D9CB52F56D6 /* NumbersLightDetailInteractor.swift */,
+				B04E89FDC1754D9CB52F56D6 /* JapaneseNumeralDetailInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -500,13 +502,13 @@
 		9FA79168F59652B9DEC4F369 /* modules */ = {
 			isa = PBXGroup;
 			children = (
-				A8996F3C9D3E9AD088D71FAF /* NumbersLightList */,
-				209FCF181879CA9EAC6E177D /* NumbersLightDetail */,
+				A8996F3C9D3E9AD088D71FAF /* JapaneseNumeralList */,
+				209FCF181879CA9EAC6E177D /* JapaneseNumeralDetail */,
 			);
 			path = modules;
 			sourceTree = "<group>";
 		};
-		A8996F3C9D3E9AD088D71FAF /* NumbersLightList */ = {
+		A8996F3C9D3E9AD088D71FAF /* JapaneseNumeralList */ = {
 			isa = PBXGroup;
 			children = (
 				8C707D11F29913F97E6F44D1 /* User Interface */,
@@ -514,7 +516,7 @@
 				C1EAC0B3473DD73642CFDF11 /* Configuration */,
 				CE3AAB17DA411904151B231C /* Protocols */,
 			);
-			path = NumbersLightList;
+			path = JapaneseNumeralList;
 			sourceTree = "<group>";
 		};
 		ABAAAE891510544F5A985EC5 /* Application Logic */ = {
@@ -528,7 +530,7 @@
 		B00FD2801B04228C0F1C9315 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				63F4979D536AEA58912CF782 /* NumbersLightListInteractor.swift */,
+				63F4979D536AEA58912CF782 /* JapaneseNumeralListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -587,7 +589,7 @@
 		D30D6330DAFE1A57E96F55DE /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				EFCC5BD9D4E12D35CDC2AFFE /* NumbersLightListRouter.swift */,
+				EFCC5BD9D4E12D35CDC2AFFE /* JapaneseNumeralListRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -603,7 +605,7 @@
 		FFFB17C4E1206DB23F005C6D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				89ACB72254339BDF1AB605EF /* NumbersLightDetailPresenter.swift */,
+				89ACB72254339BDF1AB605EF /* JapaneseNumeralDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -719,10 +721,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				36347C3523DF4A5700059A32 /* LaunchScreen.storyboard in Resources */,
-				36A436CA23E2160B00782BC4 /* NumberLightTableViewCell.xib in Resources */,
+				36A436CA23E2160B00782BC4 /* JapaneseNumeralTableViewCell.xib in Resources */,
 				36347C3223DF4A5700059A32 /* Assets.xcassets in Resources */,
-				36A436C623E1FE8C00782BC4 /* NumbersLightListViewController.storyboard in Resources */,
-				36B8DB3423E59DDC00714E4D /* NumbersLightDetail.storyboard in Resources */,
+				36A436C623E1FE8C00782BC4 /* JapaneseNumeralTableViewController.storyboard in Resources */,
+				36B8DB3423E59DDC00714E4D /* JapaneseNumeralDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,28 +869,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36A436AF23E02F2B00782BC4 /* NumberLightService.swift in Sources */,
-				36A436AD23E02C9100782BC4 /* NumbersLightAPIRouter.swift in Sources */,
+				36A436AF23E02F2B00782BC4 /* TappticJapaneseNumeralService.swift in Sources */,
+				36A436AD23E02C9100782BC4 /* JapaneseNumeralAPIRouter.swift in Sources */,
 				36347C2923DF4A5400059A32 /* AppDelegate.swift in Sources */,
-				97B4C29B67EA8E6CD3C89E47 /* NumbersLightListViewController.swift in Sources */,
-				29606D8BA6BB74D3E7096A22 /* NumbersLightListPresenter.swift in Sources */,
-				E7889209EDD6C916EAE7F8BA /* NumbersLightListInteractor.swift in Sources */,
-				B36A96B0787FD01DE9BA5B8F /* NumbersLightListRouter.swift in Sources */,
-				36A436C923E2160B00782BC4 /* NumberLightTableViewCell.swift in Sources */,
+				97B4C29B67EA8E6CD3C89E47 /* JapaneseNumeralTableViewController.swift in Sources */,
+				29606D8BA6BB74D3E7096A22 /* JapaneseNumeralListPresenter.swift in Sources */,
+				E7889209EDD6C916EAE7F8BA /* JapaneseNumeralListInteractor.swift in Sources */,
+				B36A96B0787FD01DE9BA5B8F /* JapaneseNumeralListRouter.swift in Sources */,
+				36A436C923E2160B00782BC4 /* JapaneseNumeralTableViewCell.swift in Sources */,
 				366E2ECF23E82C4600CB95C3 /* UIViewController+displayError.swift in Sources */,
 				927D870F4C31BA19E9F5FB14 /* NumbersLightListConfigurator.swift in Sources */,
-				36A436C423E08B4100782BC4 /* NumberLight.swift in Sources */,
+				36A436C423E08B4100782BC4 /* JapaneseNumeral.swift in Sources */,
 				BAAD316F6092DD727B9D1267 /* NumbersLightListInitializer.swift in Sources */,
 				36A436CE23E31C7700782BC4 /* NetworkManager.swift in Sources */,
 				36A436CC23E2192600782BC4 /* UITableViewRegistrable.swift in Sources */,
 				CA66C56896DDB68C4362B05C /* NumbersLightListProtocols.swift in Sources */,
-				2EEDA008D06E1412A6AB3F5F /* NumbersLightDetailViewController.swift in Sources */,
-				CA0ED75E4EC43128EF2262BF /* NumbersLightDetailPresenter.swift in Sources */,
-				AA94CDE1464F321E9C62C3DC /* NumbersLightDetailInteractor.swift in Sources */,
-				7DDA3B84A45E79004C182440 /* NumbersLightDetailRouter.swift in Sources */,
-				5559BFFD90BB5FE1F92784F8 /* NumbersLightDetailConfigurator.swift in Sources */,
-				991EEB647A5986E808F39B60 /* NumbersLightDetailInitializer.swift in Sources */,
-				4F52D608BC09DD6C952A58D5 /* NumbersLightDetailProtocols.swift in Sources */,
+				2EEDA008D06E1412A6AB3F5F /* JapaneseNumeralDetailViewController.swift in Sources */,
+				CA0ED75E4EC43128EF2262BF /* JapaneseNumeralDetailPresenter.swift in Sources */,
+				AA94CDE1464F321E9C62C3DC /* JapaneseNumeralDetailInteractor.swift in Sources */,
+				7DDA3B84A45E79004C182440 /* JapaneseNumeralDetailRouter.swift in Sources */,
+				5559BFFD90BB5FE1F92784F8 /* JapaneseNumeralDetailModuleConfigurator.swift in Sources */,
+				991EEB647A5986E808F39B60 /* JapaneseNumeralDetailModuleInitializer.swift in Sources */,
+				4F52D608BC09DD6C952A58D5 /* JapaneseNumeralDetailProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,16 +900,10 @@
 			files = (
 				36A436C023E02F7400782BC4 /* NumberLightServiceSpecs.swift in Sources */,
 				36347C4023DF4A5700059A32 /* NumbersLightTests.swift in Sources */,
-				36A436BD23E02F5000782BC4 /* NumbersLightListviewcontrollerSpecs.swift in Sources */,
 				36A436C223E031C700782BC4 /* Mock.generated.swift in Sources */,
-				36A436BE23E02F5000782BC4 /* NumbersLightListRouterSpecs.swift in Sources */,
-				36A436BB23E02F5000782BC4 /* NumbersLightListInteractorSpecs.swift in Sources */,
-				890AD00CC9A36D3BEC8DC674 /* NumbersLightListviewcontrollerSpecs.swift in Sources */,
-				69D4D7E120700AF6B47A5B79 /* NumbersLightListPresenterSpecs.swift in Sources */,
-				BFF3412924859C64EFE9613F /* NumbersLightDetailviewcontrollerSpecs.swift in Sources */,
-				D0D3A01020BFEE53111CBAD2 /* NumbersLightDetailPresenterSpecs.swift in Sources */,
-				A6AB58B7D5597A1F6C1FD13F /* NumbersLightDetailInteractorSpecs.swift in Sources */,
-				F510C5116A7ED88B6376D186 /* NumbersLightDetailRouterSpecs.swift in Sources */,
+				36A436BE23E02F5000782BC4 /* JapaneseNumeralListRouterSpecs.swift in Sources */,
+				36A436BB23E02F5000782BC4 /* JapaneseNumeralListInteractorSpecs.swift in Sources */,
+				363B6A4223E854C800E54563 /* JapaneseNumeralListPresenterSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

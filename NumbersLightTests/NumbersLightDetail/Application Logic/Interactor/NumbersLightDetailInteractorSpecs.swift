@@ -16,22 +16,22 @@ import SwiftyMocky
 
 final class NumbersLightDetailInteractorSpecs: QuickSpec {
 
-    var interactor: NumbersLightDetailInteractor!
-    var presenterMock: NumbersLightDetailInteractorOutputProtocolMock!
+    var interactor: JapaneseNumeralDetailInteractor!
+    var presenterMock: JapaneseNumeralDetailInteractorOutputProtocolMock!
 
     override func spec() {
     
     }
 }
 
-extension NumbersLightDetailInteractor {
-    static func forTest(presenterMock: inout NumbersLightDetailInteractorOutputProtocolMock) -> NumbersLightDetailInteractor  {
-       let interactor = NumbersLightDetailInteractor(output: presenterMock)
+extension JapaneseNumeralDetailInteractor {
+    static func forTest(presenterMock: inout JapaneseNumeralDetailInteractorOutputProtocolMock) -> JapaneseNumeralDetailInteractor  {
+       let interactor = JapaneseNumeralDetailInteractor(output: presenterMock)
        
        return interactor
     }
 }
 
-fileprivate extension  NumbersLightDetailInteractorOutputProtocolMock {
+fileprivate extension  JapaneseNumeralDetailInteractorOutputProtocolMock {
 
 }

@@ -14,17 +14,17 @@ import SwiftyMocky
 @testable import NumbersLight
 
 final class NumbersLightDetailRouterSpecs: QuickSpec {
-   var router: NumbersLightDetailRouter!
+   var router: JapaneseNumeralDetailRouter!
 
    override func spec() {
     
    }
 }
 
-extension NumbersLightDetailRouter {
+extension JapaneseNumeralDetailRouter {
     
-    static func forTest() -> NumbersLightDetailRouter {
-       let router = NumbersLightDetailRouter()
+    static func forTest() -> JapaneseNumeralDetailRouter {
+       let router = JapaneseNumeralDetailRouter()
        
        return router
     }
