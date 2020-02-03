@@ -13,20 +13,38 @@ import StoryboardLoadable
 
 final class NumbersLightListRouter {
     var detailRouter: NumbersLightDetailRouterProtocol?
+    var splitViewController: UISplitViewController?
     var navigationController: UINavigationController?
 }
 
 // MARK:  NumbersLightListRouterProtocol 
 extension NumbersLightListRouter: NumbersLightListRouterProtocol {
      func present(from viewController:UIViewController) {
-        let numberslightlistViewController =  UIStoryboard.loadViewController() as NumbersLightListViewController
+        let numberslightlistViewController = UIStoryboard.loadViewController() as NumbersLightListViewController
         viewController.present(numberslightlistViewController, animated: true, completion: nil)
      }
     
     func pushDetailView(name: String) {
-        guard let navigationController: UINavigationController = self.navigationController else {
+        guard let splitViewController: UISplitViewController = self.splitViewController else {
             return
         }
-        self.detailRouter?.push(name: name, from: navigationController)
+        if splitViewController.viewControllers.count == 1 {
+            let detailsLightListViewController = UIStoryboard.loadViewController() as NumbersLightDetailViewController
+            if let presenter = detailsLightListViewController.output as? NumbersLightDetailPresenter {
+                presenter.presentnumberLightDetail(name: name)
+            }
+            let navigation = UINavigationController()
+            navigation.viewControllers.append(detailsLightListViewController)
+            splitViewController.showDetailViewController(navigation, sender: self)
+        } else {
+            guard let detailsLightListViewController = splitViewController.viewControllers.last as? NumbersLightDetailViewController,
+                let presenter = detailsLightListViewController.output as? NumbersLightDetailPresenter
+                else {
+                    return
+            }
+            presenter.presentnumberLightDetail(name: name)
+            
+        }
+        
     }
 }

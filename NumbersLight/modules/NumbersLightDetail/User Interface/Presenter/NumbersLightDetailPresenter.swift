@@ -33,6 +33,18 @@ extension NumbersLightDetailPresenter: NumbersLightDetailPresentationProtocol {
     func presentnumberLightDetail(name: String) {
         
         self.name = name
+        self.interactor?.getNumberLight(name: name) { (result: Result<NumberLight, Error>) in
+            
+            DispatchQueue.main.async {
+                self.view?.isLoading = false
+                switch result {
+                case .success(let numberLight):
+                    self.view?.numberLight = numberLight
+                case .failure(let error):
+                    return
+                }
+            }
+        }
     }
 }
 
@@ -51,16 +63,16 @@ extension NumbersLightDetailPresenter: NumbersLightDetailViewEventResponderProto
         guard let name: String = self.name else { return }
         self.view?.isLoading = true
         self.interactor?.getNumberLight(name: name) { (result: Result<NumberLight, Error>) in
-            
-            DispatchQueue.main.async {
-                self.view?.isLoading = false
-                switch result {
-                case .success(let numberLight):
-                    self.view?.numberLight = numberLight
-                case .failure(let error):
-                    return
-                }
-            }
+//
+//            DispatchQueue.main.async {
+//                self.view?.isLoading = false
+//                switch result {
+//                case .success(let numberLight):
+//                    self.view?.numberLight = numberLight
+//                case .failure(let error):
+//                    return
+//                }
+//            }
         }
     }
 }

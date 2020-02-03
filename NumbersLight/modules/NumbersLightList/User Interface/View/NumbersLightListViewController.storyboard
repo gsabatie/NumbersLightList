@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gef-UV-IYm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VwQ-iX-c3q">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,20 +9,32 @@
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="fgQ-6o-RUF">
+        <scene sceneID="e6F-F0-xau">
             <objects>
-                <navigationController id="gef-UV-IYm" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a7h-Bd-g4T">
+                <navigationController id="zzV-ks-6Dr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FR8-hu-b18">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="8CU-KV-VZp" kind="relationship" relationship="rootViewController" id="4Tk-Nf-WyH"/>
+                        <segue destination="8CU-KV-VZp" kind="relationship" relationship="rootViewController" id="XAa-8e-MSq"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PwB-Qy-0D0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIc-fs-LEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1258" y="248"/>
+            <point key="canvasLocation" x="-1379" y="-583"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="NZ9-tH-DWJ">
+            <objects>
+                <splitViewController id="VwQ-iX-c3q" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="zzV-ks-6Dr" kind="relationship" relationship="masterViewController" id="9UI-H6-cyR"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dY3-ny-sg4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2297" y="-260"/>
         </scene>
         <!--Numberslightlist View Controller-->
         <scene sceneID="UUZ-Js-FzR">
@@ -58,7 +70,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="-90" y="240"/>
+            <point key="canvasLocation" x="-314" y="-459"/>
         </scene>
     </scenes>
 </document>

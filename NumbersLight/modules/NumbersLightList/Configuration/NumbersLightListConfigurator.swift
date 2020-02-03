@@ -32,9 +32,12 @@ final class NumbersLightListModuleConfigurator {
     }
     
     private func configure(viewController:NumbersLightListViewController) {
+       
         let router = NumbersLightListRouter()
         router.detailRouter = NumbersLightDetailRouter()
         router.navigationController = viewController.navigationController
+        router.splitViewController = viewController.splitViewController
+
         let presenter = NumbersLightListPresenter(router: router, view: viewController)
         let interactor = NumbersLightListInteractor(output:presenter)
         

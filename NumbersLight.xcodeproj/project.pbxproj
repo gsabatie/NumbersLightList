@@ -11,8 +11,6 @@
 		29606D8BA6BB74D3E7096A22 /* NumbersLightListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB5E44D49DF6330B330E182 /* NumbersLightListPresenter.swift */; };
 		2EEDA008D06E1412A6AB3F5F /* NumbersLightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84458227D496109929BA52A /* NumbersLightDetailViewController.swift */; };
 		36347C2923DF4A5400059A32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36347C2823DF4A5400059A32 /* AppDelegate.swift */; };
-		36347C2D23DF4A5400059A32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36347C2C23DF4A5400059A32 /* ViewController.swift */; };
-		36347C3023DF4A5400059A32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36347C2E23DF4A5400059A32 /* Main.storyboard */; };
 		36347C3223DF4A5700059A32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36347C3123DF4A5700059A32 /* Assets.xcassets */; };
 		36347C3523DF4A5700059A32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36347C3323DF4A5700059A32 /* LaunchScreen.storyboard */; };
 		36347C4023DF4A5700059A32 /* NumbersLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36347C3F23DF4A5700059A32 /* NumbersLightTests.swift */; };
@@ -78,8 +76,6 @@
 		343E2388B8501583F718069B /* NumbersLightDetailInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumbersLightDetailInitializer.swift; sourceTree = "<group>"; };
 		36347C2523DF4A5400059A32 /* NumbersLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumbersLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36347C2823DF4A5400059A32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36347C2C23DF4A5400059A32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		36347C2F23DF4A5400059A32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36347C3123DF4A5700059A32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36347C3423DF4A5700059A32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36347C3623DF4A5700059A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -305,8 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				36347C2823DF4A5400059A32 /* AppDelegate.swift */,
-				36347C2C23DF4A5400059A32 /* ViewController.swift */,
-				36347C2E23DF4A5400059A32 /* Main.storyboard */,
 				36347C3123DF4A5700059A32 /* Assets.xcassets */,
 				36347C3323DF4A5700059A32 /* LaunchScreen.storyboard */,
 				36347C3623DF4A5700059A32 /* Info.plist */,
@@ -716,7 +710,6 @@
 				36347C3523DF4A5700059A32 /* LaunchScreen.storyboard in Resources */,
 				36A436CA23E2160B00782BC4 /* NumberLightTableViewCell.xib in Resources */,
 				36347C3223DF4A5700059A32 /* Assets.xcassets in Resources */,
-				36347C3023DF4A5400059A32 /* Main.storyboard in Resources */,
 				36A436C623E1FE8C00782BC4 /* NumbersLightListViewController.storyboard in Resources */,
 				36B8DB3423E59DDC00714E4D /* NumbersLightDetail.storyboard in Resources */,
 			);
@@ -863,7 +856,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36347C2D23DF4A5400059A32 /* ViewController.swift in Sources */,
 				36A436AF23E02F2B00782BC4 /* NumberLightService.swift in Sources */,
 				36A436AD23E02C9100782BC4 /* NumbersLightAPIRouter.swift in Sources */,
 				36347C2923DF4A5400059A32 /* AppDelegate.swift in Sources */,
@@ -931,14 +923,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		36347C2E23DF4A5400059A32 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36347C2F23DF4A5400059A32 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		36347C3323DF4A5700059A32 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

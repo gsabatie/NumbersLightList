@@ -51,7 +51,7 @@ final class NumbersLightListViewController: UIViewController, StoryboardLoadable
         NumberLightTableViewCell.register(tableView: &self.tableView)
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
+        self.splitViewController?.preferredDisplayMode = .allVisible
         self.refreshControl
             .addTarget(
                 self,
