@@ -81,13 +81,15 @@ extension JapaneseNumeralListPresenter: JapaneseNumeralListViewEventResponderPro
         self.presentDetail(japaneseNumeral: japaneseNumerals[index.row])
     }
     
-    func viewDidLoad() {}
+    func viewDidLoad() {
+        guard let interactor = self.interactor else { return }
+               if interactor.isNetworkReachable  {
+                   self.presentJapaneseNumeralList()
+               }
+    }
     
     func viewDidAppear() {
-        guard let interactor = self.interactor else { return }
-        if interactor.isNetworkReachable  {
-            self.presentJapaneseNumeralList()
-        }
+       
     }
     
     func didRefreshTableView() {

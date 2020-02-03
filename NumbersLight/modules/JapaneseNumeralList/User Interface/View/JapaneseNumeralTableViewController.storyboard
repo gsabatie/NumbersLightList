@@ -51,7 +51,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="G8m-eg-vU7" firstAttribute="top" secondItem="hpu-dL-kr4" secondAttribute="top" id="ipM-A1-20d"/>
                             <constraint firstItem="hpu-dL-kr4" firstAttribute="bottom" secondItem="G8m-eg-vU7" secondAttribute="bottom" id="tHN-m7-lNl"/>
