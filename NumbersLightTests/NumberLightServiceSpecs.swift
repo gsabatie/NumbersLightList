@@ -17,11 +17,21 @@ final class NumberLightServiceSpecs: QuickSpec {
     
     override func spec() {
         describe("Get test Objects") {
-            let numberLightService: NumberLightService = NumberLightService()
-            it("should return a list of numberLight object") {
-                numberLightService.getTestObject{
-                    (result: Result<[NumberLight], Error>) in
+            let numberLightService: TappticJapaneseNumeralService = TappticJapaneseNumeralService()
+            it("should return a list of japaneseNumeral object") {
+                numberLightService.getJapaneseNumerals {
+                    (result: Result<[JapaneseNumeral], Error>) in
                     expect(try? result.get().count) > 0
+                }
+            }
+        }
+        describe("Get detail for a test object") {
+              let numberLightService: TappticJapaneseNumeralService = TappticJapaneseNumeralService()
+            it("should return a list of japaneseNumeral object") {
+                numberLightService.getJapaneseNumeral(arabicRepresentation: "1") {
+                    (result: Result<JapaneseNumeral, Error>) in
+                    expect(try? result.get().arabicRepresentation) == "1"
+
                 }
             }
         }

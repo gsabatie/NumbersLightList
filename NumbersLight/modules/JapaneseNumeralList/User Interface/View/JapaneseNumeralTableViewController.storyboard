@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VwQ-iX-c3q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="e6F-F0-xau">
+            <objects>
+                <navigationController id="zzV-ks-6Dr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FR8-hu-b18">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="BackgroundColor"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8CU-KV-VZp" kind="relationship" relationship="rootViewController" id="XAa-8e-MSq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIc-fs-LEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1379" y="-583"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="NZ9-tH-DWJ">
+            <objects>
+                <splitViewController id="VwQ-iX-c3q" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="zzV-ks-6Dr" kind="relationship" relationship="masterViewController" id="9UI-H6-cyR"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dY3-ny-sg4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2297" y="-260"/>
+        </scene>
+        <!--Numberslightlist View Controller-->
+        <scene sceneID="UUZ-Js-FzR">
+            <objects>
+                <viewController storyboardIdentifier="JapaneseNumeralTableViewController" id="8CU-KV-VZp" customClass="JapaneseNumeralTableViewController" customModule="NumbersLight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ub2-m8-aZc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G8m-eg-vU7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G8m-eg-vU7" firstAttribute="top" secondItem="hpu-dL-kr4" secondAttribute="top" id="ipM-A1-20d"/>
+                            <constraint firstItem="hpu-dL-kr4" firstAttribute="bottom" secondItem="G8m-eg-vU7" secondAttribute="bottom" id="tHN-m7-lNl"/>
+                            <constraint firstItem="hpu-dL-kr4" firstAttribute="trailing" secondItem="G8m-eg-vU7" secondAttribute="trailing" id="tYM-5M-1UL"/>
+                            <constraint firstItem="G8m-eg-vU7" firstAttribute="leading" secondItem="hpu-dL-kr4" secondAttribute="leading" id="zfF-s5-FEe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hpu-dL-kr4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nza-AH-CeY"/>
+                    <connections>
+                        <outlet property="tableView" destination="G8m-eg-vU7" id="XMc-j2-Hnj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIN-CM-BC4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="0II-sk-Kga" customClass="NumbersLightListModuleInitializer" customModule="NumbersLight" customModuleProvider="target">
+                    <connections>
+                        <outlet property="numberslightlistViewController" destination="8CU-KV-VZp" id="IwJ-7p-Ovk"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-314" y="-459"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
