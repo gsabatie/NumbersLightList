@@ -77,7 +77,12 @@ extension JapaneseNumeralListPresenter: JapaneseNumeralListInteractorOutputProto
 // MARK: NumbersLightListViewEventResponderProtocol
 extension JapaneseNumeralListPresenter: JapaneseNumeralListViewEventResponderProtocol {
     func didSelectRowat(index: IndexPath) {
-        guard let japaneseNumerals: [JapaneseNumeral] = self.japaneseNumerals else { return }
+        guard let japaneseNumerals: [JapaneseNumeral] = self.japaneseNumerals,
+            let reachabilityStatus = self.reachabilityStatus,
+            reachabilityStatus != .notReachable
+        else {
+            return
+        }
         self.presentDetail(japaneseNumeral: japaneseNumerals[index.row])
     }
     
