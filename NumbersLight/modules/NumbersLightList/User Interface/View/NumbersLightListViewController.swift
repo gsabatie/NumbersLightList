@@ -39,8 +39,7 @@ final class NumbersLightListViewController: UIViewController, StoryboardLoadable
     // MARK: Private instance variable
     private var progresshud: JGProgressHUD = JGProgressHUD(style: .dark)
     
-    private var errorAlertController: UIAlertController =
-        UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
+    
     
     private var refreshControl: UIRefreshControl = UIRefreshControl()
     
@@ -60,12 +59,7 @@ final class NumbersLightListViewController: UIViewController, StoryboardLoadable
                 action: #selector(didRefresh(_:)),
                 for: UIControl.Event.valueChanged)
         self.tableView.addSubview(self.refreshControl)
-        
-        self.errorAlertController.addAction(UIAlertAction(title: "Ok", style: .default) {
-            (allertAction: UIAlertAction) in
-            self.errorAlertController.dismiss(animated: true, completion: nil)
-        })
-        
+
         self.output?.viewDidLoad()
     }
     
@@ -139,14 +133,7 @@ extension NumbersLightListViewController: UITableViewDataSource {
     }
 }
 // MARK: - extension NumbersLightListViewProtocol
-extension NumbersLightListViewController: NumbersLightListViewProtocol {
-    func display(errorMessage: String) {
-        self.errorAlertController.message = errorMessage
-        if !self.errorAlertController.isBeingPresented {
-            self.present(self.errorAlertController, animated: true, completion: nil)
-        }
-    }
-}
+extension NumbersLightListViewController: NumbersLightListViewProtocol {}
 
 // MARK: - private extension
 private extension UITableView {

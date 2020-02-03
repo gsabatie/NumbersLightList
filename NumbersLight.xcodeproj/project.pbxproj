@@ -15,6 +15,7 @@
 		36347C3523DF4A5700059A32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36347C3323DF4A5700059A32 /* LaunchScreen.storyboard */; };
 		36347C4023DF4A5700059A32 /* NumbersLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36347C3F23DF4A5700059A32 /* NumbersLightTests.swift */; };
 		36347C4B23DF4A5700059A32 /* NumbersLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36347C4A23DF4A5700059A32 /* NumbersLightUITests.swift */; };
+		366E2ECF23E82C4600CB95C3 /* UIViewController+displayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E2ECE23E82C4600CB95C3 /* UIViewController+displayError.swift */; };
 		36A436AD23E02C9100782BC4 /* NumbersLightAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436AC23E02C9100782BC4 /* NumbersLightAPIRouter.swift */; };
 		36A436AF23E02F2B00782BC4 /* NumberLightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436AE23E02F2B00782BC4 /* NumberLightService.swift */; };
 		36A436BB23E02F5000782BC4 /* NumbersLightListInteractorSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436B323E02F5000782BC4 /* NumbersLightListInteractorSpecs.swift */; };
@@ -85,6 +86,7 @@
 		36347C4623DF4A5700059A32 /* NumbersLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbersLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36347C4A23DF4A5700059A32 /* NumbersLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersLightUITests.swift; sourceTree = "<group>"; };
 		36347C4C23DF4A5700059A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		366E2ECE23E82C4600CB95C3 /* UIViewController+displayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+displayError.swift"; sourceTree = "<group>"; };
 		36A436AC23E02C9100782BC4 /* NumbersLightAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersLightAPIRouter.swift; sourceTree = "<group>"; };
 		36A436AE23E02F2B00782BC4 /* NumberLightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberLightService.swift; sourceTree = "<group>"; };
 		36A436B323E02F5000782BC4 /* NumbersLightListInteractorSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumbersLightListInteractorSpecs.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				36A436AC23E02C9100782BC4 /* NumbersLightAPIRouter.swift */,
 				36A436C323E08B4100782BC4 /* NumberLight.swift */,
 				36A436AE23E02F2B00782BC4 /* NumberLightService.swift */,
+				366E2ECE23E82C4600CB95C3 /* UIViewController+displayError.swift */,
 				9FA79168F59652B9DEC4F369 /* modules */,
 				36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */,
 			);
@@ -872,6 +875,7 @@
 				E7889209EDD6C916EAE7F8BA /* NumbersLightListInteractor.swift in Sources */,
 				B36A96B0787FD01DE9BA5B8F /* NumbersLightListRouter.swift in Sources */,
 				36A436C923E2160B00782BC4 /* NumberLightTableViewCell.swift in Sources */,
+				366E2ECF23E82C4600CB95C3 /* UIViewController+displayError.swift in Sources */,
 				927D870F4C31BA19E9F5FB14 /* NumbersLightListConfigurator.swift in Sources */,
 				36A436C423E08B4100782BC4 /* NumberLight.swift in Sources */,
 				BAAD316F6092DD727B9D1267 /* NumbersLightListInitializer.swift in Sources */,

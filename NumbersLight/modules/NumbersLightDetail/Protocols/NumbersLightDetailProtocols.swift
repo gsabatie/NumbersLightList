@@ -9,13 +9,11 @@
 import UIKit
 
 //sourcery: AutoMockable
-protocol NumbersLightDetailViewProtocol: class{
+protocol NumbersLightDetailViewProtocol: class, DisplayErrorMessage{
     var output: NumbersLightDetailViewEventResponderProtocol? {get set}
     
     var numberLight: NumberLight? { get set }
     var isLoading: Bool { get set }
-    
-    func display(errorMessage: String)
 }
 
 //sourcery: AutoMockable

@@ -10,13 +10,11 @@ import UIKit
 import Alamofire
 
 //sourcery: AutoMockable
-protocol NumbersLightListViewProtocol: class{
+protocol NumbersLightListViewProtocol: class, DisplayErrorMessage {
     var output: NumbersLightListViewEventResponderProtocol? {get set}
     var numberLight: [NumberLight] {get set}
     
     var isLoading: Bool { get set }
-    
-    func display(errorMessage: String)
 }
 
 //sourcery: AutoMockable
