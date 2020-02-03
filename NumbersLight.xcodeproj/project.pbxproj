@@ -28,7 +28,6 @@
 		36A436C923E2160B00782BC4 /* JapaneseNumeralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436C723E2160B00782BC4 /* JapaneseNumeralTableViewCell.swift */; };
 		36A436CA23E2160B00782BC4 /* JapaneseNumeralTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36A436C823E2160B00782BC4 /* JapaneseNumeralTableViewCell.xib */; };
 		36A436CC23E2192600782BC4 /* UITableViewRegistrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */; };
-		36A436CE23E31C7700782BC4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A436CD23E31C7700782BC4 /* NetworkManager.swift */; };
 		36B8DB3423E59DDC00714E4D /* JapaneseNumeralDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36B8DB3323E59DDC00714E4D /* JapaneseNumeralDetail.storyboard */; };
 		389B4560643D79510938F995 /* Pods_NumbersLight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFD3C53405BE24492177125 /* Pods_NumbersLight.framework */; };
 		4F52D608BC09DD6C952A58D5 /* JapaneseNumeralDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780484657DF5327D94BCBE6D /* JapaneseNumeralDetailProtocols.swift */; };
@@ -94,7 +93,6 @@
 		36A436C723E2160B00782BC4 /* JapaneseNumeralTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralTableViewCell.swift; sourceTree = "<group>"; };
 		36A436C823E2160B00782BC4 /* JapaneseNumeralTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JapaneseNumeralTableViewCell.xib; sourceTree = "<group>"; };
 		36A436CB23E2192600782BC4 /* UITableViewRegistrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRegistrable.swift; sourceTree = "<group>"; };
-		36A436CD23E31C7700782BC4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		36B8DB3323E59DDC00714E4D /* JapaneseNumeralDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JapaneseNumeralDetail.storyboard; sourceTree = "<group>"; };
 		40483C23A1DD9E069E1E5C6F /* Pods_NumbersLight_NumbersLightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NumbersLight_NumbersLightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F0485ECA042C6D63985B28 /* JapaneseNumeralTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JapaneseNumeralTableViewController.swift; sourceTree = "<group>"; };
@@ -271,7 +269,6 @@
 		36347C1C23DF4A5400059A32 = {
 			isa = PBXGroup;
 			children = (
-				36A436CD23E31C7700782BC4 /* NetworkManager.swift */,
 				36347C2723DF4A5400059A32 /* NumbersLight */,
 				36347C3E23DF4A5700059A32 /* NumbersLightTests */,
 				36347C4923DF4A5700059A32 /* NumbersLightUITests */,
@@ -881,7 +878,6 @@
 				927D870F4C31BA19E9F5FB14 /* NumbersLightListConfigurator.swift in Sources */,
 				36A436C423E08B4100782BC4 /* JapaneseNumeral.swift in Sources */,
 				BAAD316F6092DD727B9D1267 /* NumbersLightListInitializer.swift in Sources */,
-				36A436CE23E31C7700782BC4 /* NetworkManager.swift in Sources */,
 				36A436CC23E2192600782BC4 /* UITableViewRegistrable.swift in Sources */,
 				CA66C56896DDB68C4362B05C /* NumbersLightListProtocols.swift in Sources */,
 				2EEDA008D06E1412A6AB3F5F /* JapaneseNumeralDetailViewController.swift in Sources */,
