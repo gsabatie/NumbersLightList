@@ -17,7 +17,6 @@ final class JapaneseNumeralDetailViewController: UIViewController, StoryboardLoa
     // MARK: IBOutlet
     @IBOutlet weak private var kanjiImageView: UIImageView!
     
-    @IBOutlet weak private var arabicRepresentationLabel: UILabel!
     @IBOutlet weak var pronunciationLabel: UILabel!
     
     // MARK: Dependency inversion variable
@@ -31,7 +30,7 @@ final class JapaneseNumeralDetailViewController: UIViewController, StoryboardLoa
                 self.pronunciationLabel.text = pronunciation
             }
             if let arabicRepresentation: String = japaneseNumeral.arabicRepresentation {
-                self.arabicRepresentationLabel.text = arabicRepresentation
+                self.title = arabicRepresentation
             }
             if let imageName: String = japaneseNumeral.kanjiImageURL,
                 let url: URL = URL(string: imageName){

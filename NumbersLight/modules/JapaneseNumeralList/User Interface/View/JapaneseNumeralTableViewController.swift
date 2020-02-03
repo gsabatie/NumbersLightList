@@ -45,6 +45,8 @@ final class JapaneseNumeralTableViewController: UIViewController, StoryboardLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Japanese Numeral"
+        
         JapaneseNumeralTableViewCell.register(tableView: &self.tableView)
         self.tableView.dataSource = self
         self.tableView.delegate = self

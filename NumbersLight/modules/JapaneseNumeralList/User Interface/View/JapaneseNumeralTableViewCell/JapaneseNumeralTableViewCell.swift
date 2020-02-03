@@ -12,9 +12,16 @@ import AlamofireImage
 class JapaneseNumeralTableViewCell: UITableViewCell, UITableViewCellRegistrable {
     
     struct Color {
-        static var highlited: UIColor  {  UIColor.red }
-        static var selected: UIColor { UIColor.blue }
-        static var normal: UIColor { UIColor.gray }
+        static var highlited: UIColor {
+            UIColor(named: "HighlightedColor")!
+        }
+        static var selected: UIColor {
+             UIColor(named: "SelectedColor")!
+            
+        }
+        static var normal: UIColor {
+             UIColor(named: "BackgroundColor")!
+        }
     }
     
     static var identifier: String = "JapaneseNumeralTableViewCell"
