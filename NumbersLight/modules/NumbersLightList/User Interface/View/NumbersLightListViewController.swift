@@ -133,8 +133,6 @@ extension NumbersLightListViewController: UITableViewDataSource {
         }
         return cell
     }
-    
-    
 }
 
 extension NumbersLightListViewController: NumbersLightListViewProtocol {

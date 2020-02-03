@@ -55,6 +55,8 @@ final class NumbersLightDetailViewController: UIViewController, StoryboardLoadab
           }
     
      private var progresshud: JGProgressHUD = JGProgressHUD(style: .dark)
+    private var errorAlertController: UIAlertController =
+       UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -70,5 +72,10 @@ final class NumbersLightDetailViewController: UIViewController, StoryboardLoadab
 
 // MARK: NumbersLightDetailViewProtocol
 extension NumbersLightDetailViewController: NumbersLightDetailViewProtocol {
-
+    func display(errorMessage: String) {
+           self.errorAlertController.message = errorMessage
+           if !self.errorAlertController.isBeingPresented {
+                  self.present(self.errorAlertController, animated: true, completion: nil)
+           }
+       }
 }
